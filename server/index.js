@@ -35,6 +35,19 @@ app.post('/api/uploads', uploadsMiddleware, (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.get('/api/uploads', (req, res, next) => {
+  const sql = `
+  select *
+    from "images"
+  `;
+
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => next(err));
+});
+
 // app.use(staticMiddleware);
 
 app.use(errorMiddleware);
