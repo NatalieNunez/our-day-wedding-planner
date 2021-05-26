@@ -3,17 +3,39 @@ import React from 'react';
 class UploadPhotos extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.state = { isClicked: false };
+    this.fileInputRef = React.createRef();
+    this.handleUploadClick = this.handleUploadClick.bind(this);
   }
 
-  handleClick() {
-    this.setState({ isClicked: true });
+  handleUploadClick() {
+    this.fileInputRef.current.click();
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const form = document.getElementById('upload-form');
+    const formData = new FormData(form);
+    fetch('/api/uploads', {
+      method: 'POST',
+      body: formData
+    })
+      .then(res => res.json())
+      .then(response => {
+        form.reset();
+      })
+      .catch(err => {
+        console.error('Error:', err);
+      });
   }
 
   render() {
     return (
-      <i className="fas fa-plus upload-icon"></i>
+      <form id="upload-form" onChange={this.handleSubmit}>
+        <input type="file" name="file" ref={this.fileInputRef} hidden/>
+        <button className="upload-btn" type="button" onClick={this.handleUploadClick}>
+          <i className="fas fa-plus upload-icon"></i>
+        </button>
+      </form>
     );
   }
 }

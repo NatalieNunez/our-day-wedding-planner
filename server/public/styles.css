@@ -23,11 +23,12 @@
 
 .upload-icon {
   color: white;
-  position: absolute;
-  top: 34px;
-  right: 36px;
   font-size: 1.2rem;
   text-shadow: 0 2px 3px #d2d2d2;
+}
+
+.upload-icon:hover {
+  font-size: 1.3rem;
 }
 
 .images-container {
@@ -46,4 +47,13 @@
 
 img {
   object-fit: contain;
+}
+
+.upload-btn {
+  position: absolute;
+  top: 34px;
+  right: 36px;
+  background-color: rgb(243, 243, 243);
+  border: none;
+  cursor: pointer;
 }
