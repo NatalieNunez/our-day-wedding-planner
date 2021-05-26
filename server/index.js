@@ -46,8 +46,6 @@ app.get('/api/uploads', (req, res, next) => {
     .catch(err => next(err));
 });
 
-// app.use(staticMiddleware);
-
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {
