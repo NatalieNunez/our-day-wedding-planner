@@ -4,8 +4,8 @@ class InspoImages extends React.Component {
   render() {
     return (
       <div className='images-container'>
-        <div className='row'>
-          <img src="../server/public/images/placeholder-image.jpeg" alt="" className="col-third" />
+        {/* <div className='row'>
+          <img src="../server/public/images/cloud-city.png" alt="placeholder" className="col-third" />
           <img src="" alt="" className="col-third" />
           <img src="" alt="" className="col-third" />
         </div>
@@ -18,7 +18,7 @@ class InspoImages extends React.Component {
           <img src="" alt="" className="col-third" />
           <img src="" alt="" className="col-third" />
           <img src="" alt="" className="col-third" />
-        </div>
+        </div> */}
       </div>
     );
   }
