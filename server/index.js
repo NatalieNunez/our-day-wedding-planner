@@ -1,9 +1,7 @@
 require('dotenv/config');
 const pg = require('pg');
 const express = require('express');
-// const ClientError = require('./client-error');
 const errorMiddleware = require('./error-middleware');
-// const staticMiddleware = require('./static-middleware');
 const uploadsMiddleware = require('./uploads-middleware');
 
 const db = new pg.Pool({
