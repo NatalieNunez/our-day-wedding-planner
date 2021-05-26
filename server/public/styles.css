@@ -36,19 +36,6 @@
   height: 80%;
 }
 
-.row {
-  display: flex;
-  height: calc(100% / 3);
-}
-
-.col-third {
-  flex-basis: calc(100% / 3);
-}
-
-img {
-  object-fit: contain;
-}
-
 .upload-btn {
   position: absolute;
   top: 34px;
