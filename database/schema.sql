@@ -5,3 +5,10 @@ set client_min_messages to warning;
 drop schema "public" cascade;
 
 create schema "public";
+
+create table "images" (
+    "imageId"    serial,
+    "url"        text           not null,
+    "createdAt"  timestamptz(6) not null default now(),
+    primary key ("imageId")
+);
