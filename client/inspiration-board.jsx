@@ -1,11 +1,13 @@
 import React from 'react';
-// import InspoImages from './inspo-images';
+import InspoImages from './inspo-images';
 import UploadPhotos from './upload-photos';
 
 class InspirationBoard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { images: null };
+    this.state = {
+      images: []
+    };
   }
 
   componentDidMount() {
@@ -17,6 +19,9 @@ class InspirationBoard extends React.Component {
             images
           });
         }
+      })
+      .catch(err => {
+        console.error('Error:', err);
       });
   }
 
@@ -26,6 +31,7 @@ class InspirationBoard extends React.Component {
         <div id='inspo-board'>
           <span id='inspo-board-header'>Inspiration Board</span>
           <UploadPhotos />
+          <InspoImages images={this.state.images} />
         </div>
       </>
     );

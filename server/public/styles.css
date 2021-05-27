@@ -1,5 +1,5 @@
 #inspo-board {
-  height: 350px;
+  height: 375px;
   width: 95%;
   background-color: rgba(207, 207, 207, 0.5);
   position: absolute;
@@ -16,6 +16,14 @@
   font-size: 1.25rem;
 }
 
+#img-container {
+  width: 20rem;
+  height: 18rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .upload-icon {
   color: white;
   font-size: 1.2rem;
@@ -26,10 +34,10 @@
   font-size: 1.3rem;
 }
 
-.images-container {
+/* .images-container {
   padding: 1rem;
   height: 80%;
-}
+} */
 
 .upload-btn {
   position: absolute;
@@ -38,4 +46,12 @@
   background-color: rgb(232, 232, 232);
   border: none;
   cursor: pointer;
+}
+
+.image {
+  object-fit: cover;
+  overflow: hidden;
+  flex-basis: calc(100% / 3);
+  height: calc(100% / 3);
+  padding: 0.2rem;
 }

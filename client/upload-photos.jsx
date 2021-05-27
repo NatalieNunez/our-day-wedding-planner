@@ -26,10 +26,6 @@ class UploadPhotos extends React.Component {
       .catch(err => {
         console.error('Error:', err);
       });
-    // fetch('/api/uploads')
-    //   .then()
-    //   .then()
-    //   .catch();
   }
 
   render() {
