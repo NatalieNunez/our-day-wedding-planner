@@ -33,7 +33,7 @@ app.post('/api/uploads', uploadsMiddleware, (req, res, next) => {
     .catch(err => next(err));
 });
 
-app.get('/api/uploads', (req, res, next) => {
+app.get('/api/uploads', uploadsMiddleware, (req, res, next) => {
   const sql = `
   select *
     from "images"
@@ -41,7 +41,8 @@ app.get('/api/uploads', (req, res, next) => {
 
   db.query(sql)
     .then(result => {
-      res.json(result.rows);
+      const images = result.rows.slice().reverse();
+      res.json(images);
     })
     .catch(err => next(err));
 });
