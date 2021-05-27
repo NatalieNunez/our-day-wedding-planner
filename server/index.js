@@ -37,12 +37,12 @@ app.get('/api/uploads', uploadsMiddleware, (req, res, next) => {
   const sql = `
   select *
     from "images"
+    order by "imageId" desc
   `;
 
   db.query(sql)
     .then(result => {
-      const images = result.rows.slice().reverse();
-      res.json(images);
+      res.json(result.rows);
     })
     .catch(err => next(err));
 });
