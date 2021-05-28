@@ -46,6 +46,30 @@ app.get('/api/uploads', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.post('/api/guests', (req, res, next) => {
+  const values = [req.body.firstName, req.body.lastName];
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
+
+  if (!firstName || !lastName) {
+    res.status(400).json({
+      error: 'First and Last name are both required contents.'
+    });
+  }
+  const sql = `
+  insert into "guests" ("firstName", "lastName")
+  values ($1, $2)
+  returning *
+  `;
+
+  db.query(sql, values)
+    .then(result => {
+      const [newGuest] = result.rows;
+      res.status(201).json(newGuest);
+    })
+    .catch(err => next(err));
+});
+
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {
