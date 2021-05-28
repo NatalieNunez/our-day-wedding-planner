@@ -108,3 +108,73 @@
   font-size: 12px;
   text-shadow: 0 2px 3px #d2d2d2;
 }
+
+#guest-modal {
+  background-color: rgb(255, 255, 255);
+  width: 80%;
+  display: flex;
+  margin: auto;
+  position: relative;
+  top: 4rem;
+  height: 15rem;
+}
+
+#guest-form {
+  width: 300px;
+}
+
+#first-name {
+  margin: 1rem 0.5rem 1rem 1rem;
+}
+
+#last-name {
+  margin: 1rem 1rem 1rem 0.5rem;
+}
+
+.modal-btns {
+  margin: 2.5rem 1rem 0.5rem;
+  height: 10px;
+}
+
+.guest-btn {
+  border: none;
+  outline: none;
+  color: #289aec;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.guest-btn.cancel {
+  position: absolute;
+}
+
+.guest-btn.save {
+  position: absolute;
+  right: 12px;
+}
+
+.divider {
+  margin: 1rem 0;
+  background-color: #eaeaea;
+  height: 3px;
+}
+
+.add-guest-label {
+  display: block;
+  margin: 0 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input {
+  width: 8rem;
+  padding: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  border: 1px solid #d0d0d0;
+}
+
+.inputs {
+  display: flex;
+}
