@@ -8,14 +8,16 @@ class GuestFooter extends React.Component {
   }
 
   handleClick() {
-
+    this.setState({
+      isClicked: true
+    });
   }
 
   render() {
     return (
       <div className="guest-footer">
-        <span className="add-guest-text">Add a guest</span>
-        <button className="add-guest-btn">
+        <h4 className="add-guest-text" onClick={this.handleClick}>Add a guest</h4>
+        <button className="add-guest-btn" onClick={this.handleClick}>
           <i className="fas fa-plus add-guest-icon"></i>
         </button>
       </div>
