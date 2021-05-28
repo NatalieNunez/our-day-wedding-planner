@@ -12,3 +12,11 @@ create table "images" (
     "createdAt"  timestamptz(6) not null default now(),
     primary key ("imageId")
 );
+
+create table "guests" (
+    "guestId"    serial,
+    "firstName"  text           not null,
+    "lastName"   text           not null,
+    "createdAt"  timestamptz(6) not null default now(),
+    primary key ("guestId")
+);
