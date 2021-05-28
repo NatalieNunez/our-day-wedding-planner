@@ -60,6 +60,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 #current-page {
@@ -72,4 +73,35 @@
   font-family: 'Stalemate', cursive;
   text-decoration: none;
   color: #979595;
+  cursor: pointer;
+}
+
+.guest-footer {
+  height: 60px;
+  background-color: #ececec;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  padding: 1rem 2rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.add-guest-text {
+  color: red;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.add-guest-btn {
+  height: 25px;
+  width: 25px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(226, 40, 40);
+}
+
+.add-guest-icon {
+  color: white;
+  font-size: 12px;
+  text-shadow: 0 2px 3px #d2d2d2;
 }
