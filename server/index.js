@@ -53,7 +53,7 @@ app.post('/api/guests', (req, res, next) => {
 
   if (!firstName || !lastName) {
     res.status(400).json({
-      error: 'First and Last name are both required contents.'
+      error: 'firstName and lastName are both required fields'
     });
   }
   const sql = `
