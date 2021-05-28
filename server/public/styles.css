@@ -22,6 +22,8 @@
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  overflow: auto;
+  align-content: flex-start;
 }
 
 .upload-icon {

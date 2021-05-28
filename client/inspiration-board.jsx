@@ -5,12 +5,33 @@ import UploadPhotos from './upload-photos';
 class InspirationBoard extends React.Component {
   constructor(props) {
     super(props);
+    this.checkSubmit = this.checkSubmit.bind(this);
+    this.getAllImages = this.getAllImages.bind(this);
     this.state = {
-      images: []
+      images: [],
+      submitted: false
     };
   }
 
   componentDidMount() {
+    this.getAllImages();
+  }
+
+  checkSubmit() {
+    fetch('/api/uploads')
+      .then(res => res.json())
+      .then(images => {
+        this.setState({
+          images,
+          submitted: true
+        });
+      })
+      .catch(err => {
+        console.error('Error:', err);
+      });
+  }
+
+  getAllImages() {
     fetch('/api/uploads')
       .then(res => res.json())
       .then(images => {
@@ -30,7 +51,7 @@ class InspirationBoard extends React.Component {
       <>
         <div id='inspo-board'>
           <span id='inspo-board-header'>Inspiration Board</span>
-          <UploadPhotos />
+          <UploadPhotos submitUpdate={this.checkSubmit} />
           <InspoImages images={this.state.images} />
         </div>
       </>
