@@ -90,8 +90,7 @@
 .add-guest-text {
   color: red;
   font-family: 'Montserrat', sans-serif;
-
-  /* font-weight: 600; */
+  cursor: pointer;
   margin: 0;
 }
 
@@ -101,6 +100,7 @@
   border: none;
   border-radius: 50%;
   background-color: rgb(226, 40, 40);
+  cursor: pointer;
 }
 
 .add-guest-icon {
