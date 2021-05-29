@@ -110,13 +110,17 @@
 }
 
 #guest-modal {
+  display: none;
+}
+
+#guest-modal-box {
   background-color: rgb(255, 255, 255);
   width: 80%;
   display: flex;
   margin: auto;
   position: relative;
-  top: 4rem;
-  height: 15rem;
+  top: 10rem;
+  height: 16rem;
 }
 
 #guest-form {
@@ -154,7 +158,7 @@
 }
 
 .divider {
-  margin: 1rem 0;
+  margin: 0.8rem 0;
   background-color: #eaeaea;
   height: 3px;
 }
@@ -163,13 +167,13 @@
   display: block;
   margin: 0 1.5rem;
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 input {
   width: 8rem;
-  padding: 0.5rem;
+  padding: 0.4rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   border: 1px solid #d0d0d0;
@@ -177,4 +181,13 @@ input {
 
 .inputs {
   display: flex;
+}
+
+#modal-open {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.76);
 }
