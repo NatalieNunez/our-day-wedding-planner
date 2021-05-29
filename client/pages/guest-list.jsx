@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../header';
-import GuestForm from '../guests/guest-form';
-import ModalGuest from '../guests/modal-guest';
+import GuestForm from '../guest/guest-form';
+import ModalGuest from '../guest/modal-guest';
 
 export default class GuestList extends React.Component {
   constructor(props) {
@@ -10,6 +10,7 @@ export default class GuestList extends React.Component {
       guests: []
     };
     this.addGuest = this.addGuest.bind(this);
+    // this.getAllGuests = this.getAllGuests.bind(this);
   }
 
   componentDidMount() {
