@@ -1,17 +1,14 @@
 import React from 'react';
-// import ModalGuest from './modal-guest';
 
 class GuestForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    // this.closeModal = this.closeModal.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.getAllGuests = this.getAllGuests.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       isClicked: false,
-      guests: [],
       firstName: '',
       lastName: ''
     };
@@ -23,12 +20,6 @@ class GuestForm extends React.Component {
       isClicked: !isClicked
     });
   }
-
-  // closeModal() {
-  //   this.setState({
-  //     isClicked: false
-  //   });
-  // }
 
   handleChange(event) {
     const target = event.target;
@@ -79,8 +70,6 @@ class GuestForm extends React.Component {
           <i className="fas fa-plus add-guest-icon"></i>
         </button>
       </div>
-
-      {/* <ModalGuest onClick={this.handleClick}/> */}
       <div id={isClicked ? 'modal-open' : 'guest-modal'}>
         <div id="guest-modal-box">
           <form id="guest-form" onSubmit={this.handleSubmit}>

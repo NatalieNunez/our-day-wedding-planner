@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../header';
 import GuestForm from '../guest/guest-form';
-import ModalGuest from '../guest/modal-guest';
 
 export default class GuestList extends React.Component {
   constructor(props) {
@@ -51,7 +50,6 @@ export default class GuestList extends React.Component {
       <>
         <Header />
         <GuestForm onSubmit={this.addGuest}/>
-        <ModalGuest />
       </>
     );
   }
