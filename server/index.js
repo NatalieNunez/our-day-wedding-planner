@@ -50,6 +50,7 @@ app.get('/api/guests', (req, res, next) => {
   const sql = `
   select *
     from "guests"
+    order by "firstName"
     `;
 
   db.query(sql)
@@ -60,10 +61,7 @@ app.get('/api/guests', (req, res, next) => {
 });
 
 app.post('/api/guests', (req, res, next) => {
-  const values = [req.body.firstName, req.body.lastName];
-  const firstName = req.body.firstName;
-  const lastName = req.body.lastName;
-
+  const { firstName, lastName } = req.body;
   if (!firstName || !lastName) {
     res.status(400).json({
       error: 'firstName and lastName are both required fields'
@@ -74,8 +72,9 @@ app.post('/api/guests', (req, res, next) => {
   values ($1, $2)
   returning *
   `;
+  const params = [firstName, lastName];
 
-  db.query(sql, values)
+  db.query(sql, params)
     .then(result => {
       const [newGuest] = result.rows;
       res.status(201).json(newGuest);

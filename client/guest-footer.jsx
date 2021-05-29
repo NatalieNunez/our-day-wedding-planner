@@ -5,7 +5,7 @@ class GuestFooter extends React.Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.addGuest = this.addGuest.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.getAllGuests = this.getAllGuests.bind(this);
     this.state = {
       isClicked: false,
@@ -25,29 +25,17 @@ class GuestFooter extends React.Component {
     });
   }
 
-  addGuest(newGuest) {
+  handleSubmit(event) {
     event.preventDefault();
-    fetch('/api/guests', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newGuest)
-    })
-      .then(res => res.json())
-      .then(newGuest => {
-        // console.log(newGuest);
-        const newArray = this.state.guests.slice();
-        newArray.push(newGuest);
-        // console.log(newArray);
-        this.setState({
-          isClicked: false,
-          guests: newArray
-        });
-      })
-      .catch(err => {
-        console.error('Error:', err);
-      });
+    const firstName = document.getElementById('first-name');
+    const lastName = document.getElementById('last-name');
+    const form = document.getElementById('guest-form');
+    const newGuest = {
+      firstName,
+      lastName
+    };
+    this.props.onSubmit(newGuest);
+    form.reset();
   }
 
   getAllGuests() {
@@ -66,8 +54,6 @@ class GuestFooter extends React.Component {
 
   render() {
     const isClicked = this.state.isClicked;
-    const openModal = 'modal-open';
-    const closeModal = 'guest-modal';
     return (
       <>
         <div className="guest-footer">
@@ -77,12 +63,12 @@ class GuestFooter extends React.Component {
         </button>
       </div>
 
-      <div id={isClicked ? openModal : closeModal}>
+      <div id={isClicked ? 'modal-open' : 'guest-modal'}>
         <div id="guest-modal-box">
           <form id="guest-form">
             <div className="modal-btns">
               <button className="guest-btn cancel" type="button" onClick={this.closeModal}>Cancel</button>
-              <button className="guest-btn save" type="submit" onSubmit={this.addGuest}>Save</button>
+              <button className="guest-btn save" type="submit">Save</button>
             </div>
             <div className="row">
               <div className="divider"></div>
