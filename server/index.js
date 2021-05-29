@@ -46,6 +46,19 @@ app.get('/api/uploads', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.get('/api/guests', (req, res, next) => {
+  const sql = `
+  select *
+    from "guests"
+    `;
+
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => next(err));
+});
+
 app.post('/api/guests', (req, res, next) => {
   const values = [req.body.firstName, req.body.lastName];
   const firstName = req.body.firstName;

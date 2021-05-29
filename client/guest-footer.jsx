@@ -5,7 +5,12 @@ class GuestFooter extends React.Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.state = { isClicked: false };
+    this.addGuest = this.addGuest.bind(this);
+    this.getAllGuests = this.getAllGuests.bind(this);
+    this.state = {
+      isClicked: false,
+      guests: []
+    };
   }
 
   handleClick() {
@@ -18,6 +23,45 @@ class GuestFooter extends React.Component {
     this.setState({
       isClicked: false
     });
+  }
+
+  addGuest(newGuest) {
+    event.preventDefault();
+    fetch('/api/guests', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newGuest)
+    })
+      .then(res => res.json())
+      .then(newGuest => {
+        // console.log(newGuest);
+        const newArray = this.state.guests.slice();
+        newArray.push(newGuest);
+        // console.log(newArray);
+        this.setState({
+          isClicked: false,
+          guests: newArray
+        });
+      })
+      .catch(err => {
+        console.error('Error:', err);
+      });
+  }
+
+  getAllGuests() {
+    fetch('/api/guests')
+      .then(res => res.json())
+      .then(guests => {
+        this.setState({
+          guests
+        });
+      });
+  }
+
+  componentDidMount() {
+    this.getAllGuests();
   }
 
   render() {
@@ -38,7 +82,7 @@ class GuestFooter extends React.Component {
           <form id="guest-form">
             <div className="modal-btns">
               <button className="guest-btn cancel" type="button" onClick={this.closeModal}>Cancel</button>
-              <button className="guest-btn save" type="submit">Save</button>
+              <button className="guest-btn save" type="submit" onSubmit={this.addGuest}>Save</button>
             </div>
             <div className="row">
               <div className="divider"></div>
