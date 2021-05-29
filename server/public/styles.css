@@ -146,6 +146,7 @@
   color: #289aec;
   background-color: white;
   font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
 }
 
 .guest-btn.cancel {
