@@ -1,0 +1,29 @@
+#img-container {
+  width: 21rem;
+  height: 18rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  align-content: flex-start;
+}
+
+#inspo-board-header {
+  margin: 2rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#inspo-board {
+  height: 375px;
+  width: 95%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.upload-btn {
+  position: absolute;
+  top: 34px;
+  right: 36px;
+}

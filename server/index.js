@@ -33,10 +33,11 @@ app.post('/api/uploads', uploadsMiddleware, (req, res, next) => {
     .catch(err => next(err));
 });
 
-app.get('/api/uploads', (req, res, next) => {
+app.get('/api/uploads', uploadsMiddleware, (req, res, next) => {
   const sql = `
   select *
     from "images"
+    order by "imageId" desc
   `;
 
   db.query(sql)
