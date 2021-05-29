@@ -1,17 +1,7 @@
 import React from 'react';
 import Header from '../header';
-import GuestForm from '../guest-footer';
-import ModalGuest from '../modal-guest';
-
-// export default function GuestList(props) {
-//   return (
-//     <>
-//       <Header />
-//       <GuestFooter />
-//       <ModalGuest />
-//     </>
-//   );
-// }
+import GuestForm from '../guests/guest-form';
+import ModalGuest from '../guests/modal-guest';
 
 export default class GuestList extends React.Component {
   constructor(props) {
