@@ -10,7 +10,6 @@ export default class GuestList extends React.Component {
       guests: []
     };
     this.addGuest = this.addGuest.bind(this);
-    // this.getAllGuests = this.getAllGuests.bind(this);
   }
 
   componentDidMount() {
