@@ -77,7 +77,6 @@
 }
 
 .guest-footer {
-  height: 60px;
   background-color: #ececec;
   position: absolute;
   bottom: 0;
@@ -149,10 +148,6 @@
   cursor: pointer;
 }
 
-.guest-btn.cancel {
-  position: absolute;
-}
-
 .guest-btn.save {
   position: absolute;
   right: 12px;
@@ -165,7 +160,6 @@
 }
 
 .add-guest-label {
-  display: block;
   margin: 0 1.5rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
