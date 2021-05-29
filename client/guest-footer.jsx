@@ -4,6 +4,7 @@ class GuestFooter extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.closeModal = this.closeModal.bind(this);
     this.state = { isClicked: false };
   }
 
@@ -13,7 +14,16 @@ class GuestFooter extends React.Component {
     });
   }
 
+  closeModal() {
+    this.setState({
+      isClicked: false
+    });
+  }
+
   render() {
+    const isClicked = this.state.isClicked;
+    const openModal = 'modal-open';
+    const closeModal = 'guest-modal';
     return (
       <>
         <div className="guest-footer">
@@ -23,11 +33,11 @@ class GuestFooter extends React.Component {
         </button>
       </div>
 
-      <div id="guest-modal">
+      <div id={isClicked ? openModal : closeModal}>
         <div id="guest-modal-box">
           <form id="guest-form">
             <div className="modal-btns">
-              <button className="guest-btn cancel">Cancel</button>
+              <button className="guest-btn cancel" type="button" onClick={this.closeModal}>Cancel</button>
               <button className="guest-btn save" type="submit">Save</button>
             </div>
             <div className="row">
