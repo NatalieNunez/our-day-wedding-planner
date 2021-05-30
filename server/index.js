@@ -62,18 +62,26 @@ app.get('/api/guests', (req, res, next) => {
 });
 
 app.post('/api/guests', (req, res, next) => {
-  const { firstName, lastName } = req.body;
-  if (!firstName || !lastName) {
+  const { firstName, lastName, status } = req.body;
+  const statusOptions = ['invited', 'attending', 'not attending'];
+  if (!firstName || !lastName || !status) {
     res.status(400).json({
       error: 'firstName and lastName are both required fields'
     });
+    return;
+  }
+  if (!statusOptions.includes(status.toLowerCase())) {
+    res.status(400).json({
+      error: 'status must be invited, attending, or not attending'
+    });
+    return;
   }
   const sql = `
-  insert into "guests" ("firstName", "lastName")
-  values ($1, $2)
+  insert into "guests" ("firstName", "lastName", "status")
+  values ($1, $2, $3)
   returning *
   `;
-  const params = [firstName, lastName];
+  const params = [firstName, lastName, status];
 
   db.query(sql, params)
     .then(result => {
