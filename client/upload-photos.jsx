@@ -5,6 +5,7 @@ class UploadPhotos extends React.Component {
     super(props);
     this.fileInputRef = React.createRef();
     this.handleUploadClick = this.handleUploadClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleUploadClick() {
@@ -20,8 +21,9 @@ class UploadPhotos extends React.Component {
       body: formData
     })
       .then(res => res.json())
-      .then(response => {
+      .then(image => {
         form.reset();
+        this.props.submitUpdate(image);
       })
       .catch(err => {
         console.error('Error:', err);
