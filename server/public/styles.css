@@ -24,6 +24,152 @@
   cursor: pointer;
 }
 
+.header {
+  height: 100px;
+  background-color: #e1eff0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  left: 15px;
+  top: 15px;
+  border-radius: 50%;
+  box-shadow: 0 3px 5px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#current-page {
+  font-family: 'Stalemate', cursive;
+  font-size: 2.5rem;
+  color: rgb(87, 85, 83);
+}
+
+.logo-text {
+  font-family: 'Stalemate', cursive;
+  text-decoration: none;
+  color: #979595;
+  cursor: pointer;
+}
+
+.guest-footer {
+  background-color: #ececec;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  padding: 1rem 2rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.add-guest-text {
+  color: red;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  margin: 0;
+}
+
+.add-guest-btn {
+  height: 25px;
+  width: 25px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(226, 40, 40);
+  cursor: pointer;
+}
+
+.add-guest-icon {
+  color: white;
+  font-size: 12px;
+  text-shadow: 0 2px 3px #d2d2d2;
+}
+
+#guest-modal {
+  display: none;
+}
+
+#guest-modal-box {
+  background-color: rgb(255, 255, 255);
+  width: 80%;
+  display: flex;
+  margin: auto;
+  position: relative;
+  top: 10rem;
+  height: 16rem;
+}
+
+#guest-form {
+  width: 300px;
+}
+
+#first-name {
+  margin: 1rem 0.5rem 1rem 1rem;
+}
+
+#last-name {
+  margin: 1rem 1rem 1rem 0.5rem;
+}
+
+.modal-btns {
+  margin: 2.5rem 1rem 0.5rem;
+  height: 10px;
+}
+
+.guest-btn {
+  border: none;
+  outline: none;
+  color: #289aec;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.guest-btn.save {
+  position: absolute;
+  right: 12px;
+}
+
+.divider {
+  margin: 0.8rem 0;
+  background-color: #eaeaea;
+  height: 3px;
+}
+
+.add-guest-label {
+  margin: 0 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+input {
+  width: 8rem;
+  padding: 0.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  border: 1px solid #d0d0d0;
+}
+
+.inputs {
+  display: flex;
+}
+
+#modal-open {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.76);
+
 .image {
   object-fit: cover;
   overflow: hidden;
@@ -31,4 +177,5 @@
   height: calc(100% / 3);
   padding: 0.2rem;
   box-shadow: 0 5px 10px #cdcdcd;
+
 }

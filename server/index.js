@@ -47,6 +47,42 @@ app.get('/api/uploads', uploadsMiddleware, (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.get('/api/guests', (req, res, next) => {
+  const sql = `
+  select *
+    from "guests"
+    order by "firstName"
+    `;
+
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => next(err));
+});
+
+app.post('/api/guests', (req, res, next) => {
+  const { firstName, lastName } = req.body;
+  if (!firstName || !lastName) {
+    res.status(400).json({
+      error: 'firstName and lastName are both required fields'
+    });
+  }
+  const sql = `
+  insert into "guests" ("firstName", "lastName")
+  values ($1, $2)
+  returning *
+  `;
+  const params = [firstName, lastName];
+
+  db.query(sql, params)
+    .then(result => {
+      const [newGuest] = result.rows;
+      res.status(201).json(newGuest);
+    })
+    .catch(err => next(err));
+});
+
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {
