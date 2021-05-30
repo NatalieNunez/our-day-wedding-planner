@@ -60,7 +60,7 @@ class GuestForm extends React.Component {
         <div id="guest-modal-box">
           <form id="guest-form" onSubmit={this.handleSubmit}>
             <div className="modal-btns">
-              <button className="guest-btn cancel" type="button" onClick={this.toggleModal}>Close</button>
+              <button className="guest-btn close" type="button" onClick={this.toggleModal}>Close</button>
               <button className="guest-btn save" type="submit">Save</button>
             </div>
             <div className="row">
@@ -69,6 +69,17 @@ class GuestForm extends React.Component {
               <div className="inputs">
                 <input required autoFocus id="first-name" placeholder="First Name" type="text" name="first-name" value={this.state.firstName} onChange={this.handleChange}/>
                 <input required autoFocus id="last-name" placeholder="Last Name" type="text" name="last-name" value={this.state.lastName} onChange={this.handleChange}/>
+              </div>
+              <div className="status-options">
+                <label className="container invited" defaultChecked >Invited
+                  <input type="radio" name="status" />
+                </label>
+                <label className="container attending">Attending
+                  <input type="radio" name="status" />
+                </label>
+                <label className="container not-attending">Not Attending
+                  <input type="radio" name="status" />
+                </label>
               </div>
             </div>
           </form>
