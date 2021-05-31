@@ -230,3 +230,7 @@ i.true {
   box-shadow: 0 2px 5px #939393;
   font-size: 0.8rem;
 }
+
+.profile-form {
+  font-family: 'Montserrat', sans-serif;
+}

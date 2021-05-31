@@ -27,3 +27,18 @@
   top: 34px;
   right: 36px;
 }
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.profile-label,
+.save-profile {
+  margin: 1rem 0;
+}
+
+.profile-input {
+  margin-bottom: 2rem;
+}
