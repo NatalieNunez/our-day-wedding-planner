@@ -98,7 +98,7 @@ class GuestForm extends React.Component {
                 onChange={this.handleChange}/>
               </div>
               <div className="status-options">
-                <label className="radio-label invited" >Invited
+                <label className={`radio-label invited ${this.state.status === 'invited'}`} >Invited
                   <input
                   type="radio"
                   name="status"
@@ -106,24 +106,27 @@ class GuestForm extends React.Component {
                   className="radio-custom"
                   checked={this.state.status === 'invited'}
                   onChange={this.optionChange} />
+                  <i className={`fas fa-check ${this.state.status === 'invited'}`}></i>
                 </label>
-                <label className="radio-label attending">Attending
+                <label className={`radio-label attending ${this.state.status === 'attending'}`}>Attending
                   <input
                   type="radio"
                   name="status"
                   value="attending"
-                  className="radio-custom"
+                  className={`radio-custom ${this.state.status === 'attending'}`}
                   checked={this.state.status === 'attending'}
                   onChange={this.optionChange} />
+                  <i className={`fas fa-check ${this.state.status === 'attending'}`}></i>
                 </label>
-                <label className="radio-label not-attending">Not Attending
+                <label className={`radio-label not-attending ${this.state.status === 'not-attending'}`}>Not Attending
                   <input
                   type="radio"
                   name="status"
                   value="not-attending"
-                  className="radio-custom"
+                  className={`radio-custom ${this.state.status === 'not-attending'}`}
                   checked={this.state.status === 'not-attending'}
                   onChange={this.optionChange} />
+                  <i className={`fas fa-check ${this.state.status === 'not-attending'}`}></i>
                 </label>
               </div>
             </div>

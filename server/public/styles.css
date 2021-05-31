@@ -103,7 +103,7 @@
   margin: auto;
   position: relative;
   top: 10rem;
-  height: 16rem;
+  height: 17rem;
 }
 
 #guest-form {
@@ -185,28 +185,48 @@ input {
 }
 
 label.radio-label {
-  margin: 0.2rem 1.5rem;
+  margin: 0.3rem 1.5rem;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.8rem;
-  padding: 0.3rem 1rem;
+  font-size: 0.7rem;
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px #d3d3d3;
+  font-weight: 600;
 }
 
 input[type="radio"] {
   position: absolute;
   right: 0;
+  opacity: 0;
 }
 
 label.invited {
-  background-color: #fff1bd;
-  color: #ac5d15;
+  background-color: #c9eaff;
+  color: #108a9b;
 }
 
 label.attending {
-  background-color: #d5ffc7;
-  color: #00a124;
+  background-color: #b4ffbf;
+  color: #01831d;
 }
 
 label.not-attending {
-  background-color: #ffd6d6;
-  color: #c92323;
+  background-color: #ffdcdc;
+  color: #ad1111;
+}
+
+i.false {
+  display: none;
+}
+
+i.true {
+  position: absolute;
+  right: 3rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.radio-label.true {
+  box-shadow: 0 2px 5px #939393;
+  font-size: 0.8rem;
 }
