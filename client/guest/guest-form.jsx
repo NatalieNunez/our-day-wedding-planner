@@ -77,8 +77,25 @@ class GuestForm extends React.Component {
               <div className="divider"></div>
               <label className="add-guest-label">Add Guest</label>
               <div className="inputs">
-                <input required autoFocus id="first-name" placeholder="First Name" type="text" name="first-name" value={this.state.firstName} onChange={this.handleChange}/>
-                <input required autoFocus id="last-name" placeholder="Last Name" type="text" name="last-name" value={this.state.lastName} onChange={this.handleChange}/>
+                <input
+                required
+                autoFocus
+                id="first-name"
+                placeholder="First Name"
+                type="text"
+                name="first-name"
+                value={this.state.firstName}
+                onChange={this.handleChange}/>
+
+                <input
+                required
+                autoFocus
+                id="last-name"
+                placeholder="Last Name"
+                type="text"
+                name="last-name"
+                value={this.state.lastName}
+                onChange={this.handleChange}/>
               </div>
               <div className="status-options">
                 <label className="radio-label invited" >Invited
