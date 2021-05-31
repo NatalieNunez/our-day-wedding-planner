@@ -91,6 +91,47 @@ app.post('/api/guests', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.put('/api/users/:userId', (req, res, next) => {
+  const userId = parseInt(req.params.userId, 10);
+  const { userName, partnerName, weddingDate } = req.body;
+  const values = [userName, partnerName, weddingDate, userId];
+
+  if (!Number.isInteger(userId) || userId <= 0) {
+    res.status(400).json({
+      error: 'userId must be a positive integer'
+    });
+    return;
+  }
+  if (!userName || !partnerName || !weddingDate) {
+    res.status(400).json({
+      error: 'userName, partnerName, and weddingDate are all required fields'
+    });
+    return;
+  }
+
+  const sql = `
+  update "users"
+    set "userName" = $1,
+        "partnerName" = $2,
+        "weddingDate" = $3
+      where "userId" = $4
+      returning *
+    `;
+
+  db.query(sql, values)
+    .then(result => {
+      const user = result.rows[0];
+      if (!user) {
+        res.status(400).json({
+          error: `Cannot find user with userId ${userId}`
+        });
+      } else {
+        res.status(200).json(result.rows[0]);
+      }
+    })
+    .catch(err => next(err));
+});
+
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {
