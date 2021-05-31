@@ -6,10 +6,12 @@ class GuestForm extends React.Component {
     this.toggleModal = this.toggleModal.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.optionChange = this.optionChange.bind(this);
     this.state = {
       modalOpen: false,
       firstName: '',
-      lastName: ''
+      lastName: '',
+      statusSelected: 'invited'
     };
   }
 
@@ -31,6 +33,12 @@ class GuestForm extends React.Component {
         lastName: target.value
       });
     }
+  }
+
+  optionChange(event) {
+    this.setState({
+      statusSelected: event.target.value
+    });
   }
 
   handleSubmit(event) {
@@ -71,14 +79,32 @@ class GuestForm extends React.Component {
                 <input required autoFocus id="last-name" placeholder="Last Name" type="text" name="last-name" value={this.state.lastName} onChange={this.handleChange}/>
               </div>
               <div className="status-options">
-                <label className="container invited" defaultChecked >Invited
-                  <input type="radio" name="status" />
+                <label className="radio-label invited" >Invited
+                  <input
+                  type="radio"
+                  name="status"
+                  value="invited"
+                  className="radio-custom"
+                  checked={this.state.statusSelected === 'invited'}
+                  onChange={this.optionChange} />
                 </label>
-                <label className="container attending">Attending
-                  <input type="radio" name="status" />
+                <label className="radio-label attending">Attending
+                  <input
+                  type="radio"
+                  name="status"
+                  value="attending"
+                  className="radio-custom"
+                  checked={this.state.statusSelected === 'attending'}
+                  onChange={this.optionChange} />
                 </label>
-                <label className="container not-attending">Not Attending
-                  <input type="radio" name="status" />
+                <label className="radio-label not-attending">Not Attending
+                  <input
+                  type="radio"
+                  name="status"
+                  value="not-attending"
+                  className="radio-custom"
+                  checked={this.state.statusSelected === 'not-attending'}
+                  onChange={this.optionChange} />
                 </label>
               </div>
             </div>
