@@ -63,16 +63,16 @@ app.get('/api/guests', (req, res, next) => {
 
 app.post('/api/guests', (req, res, next) => {
   const { firstName, lastName, status } = req.body;
-  const statusOptions = ['invited', 'attending', 'not attending'];
+  const statusOptions = ['invited', 'attending', 'not-attending'];
   if (!firstName || !lastName || !status) {
     res.status(400).json({
-      error: 'firstName and lastName are both required fields'
+      error: 'firstName, lastName, and status are all required fields'
     });
     return;
   }
   if (!statusOptions.includes(status.toLowerCase())) {
     res.status(400).json({
-      error: 'status must be invited, attending, or not attending'
+      error: 'status must be invited, attending, or not-attending'
     });
     return;
   }

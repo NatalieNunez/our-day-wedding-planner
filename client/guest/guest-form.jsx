@@ -11,7 +11,7 @@ class GuestForm extends React.Component {
       modalOpen: false,
       firstName: '',
       lastName: '',
-      statusSelected: 'invited'
+      status: 'invited'
     };
   }
 
@@ -37,7 +37,7 @@ class GuestForm extends React.Component {
 
   optionChange(event) {
     this.setState({
-      statusSelected: event.target.value
+      status: event.target.value
     });
   }
 
@@ -45,12 +45,14 @@ class GuestForm extends React.Component {
     event.preventDefault();
     const newGuest = {
       firstName: this.state.firstName,
-      lastName: this.state.lastName
+      lastName: this.state.lastName,
+      status: this.state.status
     };
     this.props.onSubmit(newGuest);
     this.setState({
       firstName: '',
-      lastName: ''
+      lastName: '',
+      status: 'invited'
     });
   }
 
@@ -85,7 +87,7 @@ class GuestForm extends React.Component {
                   name="status"
                   value="invited"
                   className="radio-custom"
-                  checked={this.state.statusSelected === 'invited'}
+                  checked={this.state.status === 'invited'}
                   onChange={this.optionChange} />
                 </label>
                 <label className="radio-label attending">Attending
@@ -94,7 +96,7 @@ class GuestForm extends React.Component {
                   name="status"
                   value="attending"
                   className="radio-custom"
-                  checked={this.state.statusSelected === 'attending'}
+                  checked={this.state.status === 'attending'}
                   onChange={this.optionChange} />
                 </label>
                 <label className="radio-label not-attending">Not Attending
@@ -103,7 +105,7 @@ class GuestForm extends React.Component {
                   name="status"
                   value="not-attending"
                   className="radio-custom"
-                  checked={this.state.statusSelected === 'not-attending'}
+                  checked={this.state.status === 'not-attending'}
                   onChange={this.optionChange} />
                 </label>
               </div>
