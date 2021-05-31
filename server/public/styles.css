@@ -103,7 +103,7 @@
   margin: auto;
   position: relative;
   top: 10rem;
-  height: 16rem;
+  height: 17rem;
 }
 
 #guest-form {
@@ -119,7 +119,7 @@
 }
 
 .modal-btns {
-  margin: 2.5rem 1rem 0.5rem;
+  margin: 1.5rem 1rem 0.5rem;
   height: 10px;
 }
 
@@ -134,7 +134,7 @@
 
 .guest-btn.save {
   position: absolute;
-  right: 12px;
+  right: 15px;
 }
 
 .divider {
@@ -154,7 +154,6 @@ input {
   width: 8rem;
   padding: 0.4rem;
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
   border: 1px solid #d0d0d0;
 }
 
@@ -169,6 +168,7 @@ input {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.76);
+}
 
 .image {
   object-fit: cover;
@@ -177,5 +177,56 @@ input {
   height: calc(100% / 3);
   padding: 0.2rem;
   box-shadow: 0 5px 10px #cdcdcd;
+}
 
+.status-options {
+  display: flex;
+  flex-direction: column;
+}
+
+label.radio-label {
+  margin: 0.3rem 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px #d3d3d3;
+  font-weight: 600;
+}
+
+input[type="radio"] {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+}
+
+label.invited {
+  background-color: #c9eaff;
+  color: #108a9b;
+}
+
+label.attending {
+  background-color: #b4ffbf;
+  color: #01831d;
+}
+
+label.not-attending {
+  background-color: #ffdcdc;
+  color: #ad1111;
+}
+
+i.false {
+  display: none;
+}
+
+i.true {
+  position: absolute;
+  right: 3rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.radio-label.true {
+  box-shadow: 0 2px 5px #939393;
+  font-size: 0.8rem;
 }
