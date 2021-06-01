@@ -22,6 +22,7 @@ export default class Profile extends React.Component {
       .then(res => res.json())
       .then(update => {
         const newUsersArray = this.state.users.slice();
+        newUsersArray.pop();
         newUsersArray.push(update);
         this.setState({
           users: newUsersArray
@@ -34,7 +35,7 @@ export default class Profile extends React.Component {
     return (
       <>
         <Header />
-        <ProfileForm onSubmit={this.updateProfile} />
+        <ProfileForm onSubmit={this.updateProfile} onClick={this.changeView} />
       </>
     );
   }

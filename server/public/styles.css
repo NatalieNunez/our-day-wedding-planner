@@ -231,6 +231,29 @@ i.true {
   font-size: 0.8rem;
 }
 
-.profile-form {
+.profile-form,
+.view-profile {
   font-family: 'Montserrat', sans-serif;
+}
+
+.edit-profile,
+.save-profile {
+  position: absolute;
+  bottom: 4rem;
+  right: 3rem;
+  width: 6rem;
+  padding: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  background-color: #1b9096;
+  outline: none;
+  border-radius: 16px;
+}
+
+.divider.profile {
+  margin: 0.8rem 0;
+  background-color: #eaeaea;
+  height: 1px;
 }
