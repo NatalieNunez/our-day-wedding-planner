@@ -1,8 +1,8 @@
 import React from 'react';
-import GuestList from './pages/guest-list';
+import Profile from './pages/profile';
 
 export default class App extends React.Component {
   render() {
-    return <GuestList />;
+    return <Profile />;
   }
 }

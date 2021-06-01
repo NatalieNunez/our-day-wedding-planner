@@ -49,7 +49,7 @@
 
 #current-page {
   font-family: 'Stalemate', cursive;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: rgb(87, 85, 83);
 }
 
@@ -229,4 +229,30 @@ i.true {
 .radio-label.true {
   box-shadow: 0 2px 5px #939393;
   font-size: 0.8rem;
+}
+
+.profile-form,
+.view-profile {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.edit-profile,
+.save-profile {
+  position: absolute;
+  bottom: 4rem;
+  right: 3rem;
+  width: 6rem;
+  padding: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  background-color: #1b9096;
+  outline: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.divider.profile {
+  height: 1px;
 }

@@ -27,3 +27,40 @@
   top: 34px;
   right: 36px;
 }
+
+.profile-form,
+.view-profile.show {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.profile-label,
+.save-profile {
+  margin: 1rem 0;
+}
+
+.profile-info {
+  margin-top: 1rem;
+}
+
+.profile-input {
+  width: 95%;
+  margin-left: 0.5rem;
+  font-size: 15px;
+  color: gray;
+}
+
+span.profile-input {
+  margin: 1rem;
+}
+
+input.profile-input {
+  border: none;
+  caret-color: #199095;
+  background-color: rgb(247 247 247);
+}
+
+.hidden {
+  display: none;
+}
