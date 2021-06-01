@@ -49,7 +49,7 @@
 
 #current-page {
   font-family: 'Stalemate', cursive;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: rgb(87, 85, 83);
 }
 
@@ -250,10 +250,9 @@ i.true {
   background-color: #1b9096;
   outline: none;
   border-radius: 16px;
+  cursor: pointer;
 }
 
 .divider.profile {
-  margin: 0.8rem 0;
-  background-color: #eaeaea;
   height: 1px;
 }

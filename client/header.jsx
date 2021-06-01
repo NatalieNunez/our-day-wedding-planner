@@ -9,7 +9,7 @@ class Header extends React.Component {
             Our Day
           </a>
         </div>
-        <span id="current-page">Guest List</span>
+        <span id="current-page">Profile</span>
       </div>
     );
   }
