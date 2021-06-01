@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../header';
+import Header from '../components/header';
 import ProfileForm from '../profile/profile-form';
 
 export default class Profile extends React.Component {

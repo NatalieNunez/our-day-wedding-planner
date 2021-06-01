@@ -1,8 +1,9 @@
 import React from 'react';
 import Profile from './pages/profile';
-import Header from './header';
+import Header from './components/header';
 import Home from './pages/home';
 import GuestList from './pages/guest-list';
+import SideNav from './components/side-nav';
 import parseRoute from './lib/parse-route';
 
 export default class App extends React.Component {
@@ -39,7 +40,8 @@ export default class App extends React.Component {
     return (
       <>
         <Header />
-        { this.renderPage() }
+        {/* { this.renderPage() } */}
+        <SideNav />
       </>
     );
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../header';
+import Header from '../components/header';
 import GuestForm from '../guest/guest-form';
 
 export default class GuestList extends React.Component {
