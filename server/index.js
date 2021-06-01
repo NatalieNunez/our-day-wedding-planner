@@ -91,7 +91,7 @@ app.post('/api/guests', (req, res, next) => {
     .catch(err => next(err));
 });
 
-app.put('/api/users/1', (req, res, next) => {
+app.put('/api/users', (req, res, next) => {
   const { userName, partnerName, weddingDate } = req.body;
   const values = [userName, partnerName, weddingDate];
   if (!userName || !partnerName || !weddingDate) {
@@ -121,6 +121,7 @@ app.get('/api/users', (req, res, next) => {
   const sql = `
   select *
     from "users"
+    where "userId" = 1
     `;
 
   db.query(sql)

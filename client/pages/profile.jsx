@@ -12,7 +12,7 @@ export default class Profile extends React.Component {
   }
 
   updateProfile(update) {
-    fetch('/api/users/1', {
+    fetch('/api/users', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
