@@ -1,29 +1,28 @@
 import React from 'react';
-// import SideNav from './side-nav';
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.toggleNav = this.toggleNav.bind(this);
-    this.state = {
-      navOpen: false
-    };
-  }
+function Header(props) {
+  // constructor(props) {
+  //   super(props);
+  //   this.toggleNav = this.toggleNav.bind(this);
+  //   // this.state = {
+  //   //   navOpen: false
+  //   // };
+  // }
 
-  toggleNav(event) {
-    const navOpen = this.state.navOpen;
-    if (event.target.className === 'nav-open' || event.target.className === 'logo-header') {
-      this.setState({
-        navOpen: !navOpen
-      });
-    }
-  }
+  // toggleNav(event) {
+  //   const navOpen = this.state.navOpen;
+  //   if (event.target.className === 'nav-open' || event.target.className === 'logo-header') {
+  //     this.setState({
+  //       navOpen: !navOpen
+  //     });
+  //   }
+  // }
 
-  render() {
-    const navOpen = this.state.navOpen;
-    return (
+  // render() {
+  // const navOpen = this.state.navOpen;
+  return (
       <>
-      <div className={navOpen ? 'nav-open' : 'nav-close'} onClick={this.toggleNav}>
+      {/* <div className={navOpen ? 'nav-open' : 'nav-close'} onClick={this.toggleNav}>
         <div className="nav-box">
           <div className="header">
             <div className="logo nav-logo">
@@ -37,19 +36,19 @@ class Header extends React.Component {
           <a className="nav-links" href="#">Budget</a>
           <div className="divider profile"></div>
         </div>
-      </div>
+      </div> */}
 
       <div className="header">
         <div className="logo">
-          <a className="logo-header" href="#" onClick={this.toggleNav}>
+          <a className="logo-header" href="#profile" openNav={props.toggleNav}>
             Our Day
           </a>
         </div>
         <span id="current-page">Profile</span>
       </div>
       </>
-    );
-  }
+  );
+  // }
 }
 
 export default Header;

@@ -1,14 +1,23 @@
 import React from 'react';
 import Header from '../components/header';
+import SideNav from '../components/side-nav';
 import ProfileForm from '../profile/profile-form';
 
 export default class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: []
+      users: [],
+      navOpen: false
     };
     this.updateProfile = this.updateProfile.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
+  }
+
+  toggleNav() {
+    this.setState({
+      navOpen: true
+    });
   }
 
   updateProfile(update) {
@@ -35,6 +44,7 @@ export default class Profile extends React.Component {
     return (
       <>
         <Header />
+        <SideNav toggleNav={this.setState}/>
         <ProfileForm onSubmit={this.updateProfile} onClick={this.changeView} />
       </>
     );
