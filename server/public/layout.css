@@ -84,3 +84,25 @@ input.profile-input {
   font-size: 2rem;
   color: #737373;
 }
+
+.guest-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+#guest-container {
+  overflow: scroll;
+  height: 24rem;
+  margin: 1rem 0;
+}
+
+.view-options {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem 0;
+}
+
+.number-guests {
+  margin: 2rem;
+}

@@ -36,7 +36,6 @@ export default class Profile extends React.Component {
       <>
         <Header />
         <ProfileForm onSubmit={this.updateProfile} />
-
       </>
     );
   }

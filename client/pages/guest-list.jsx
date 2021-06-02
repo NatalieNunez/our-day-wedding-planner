@@ -1,14 +1,19 @@
 import React from 'react';
 import Header from '../components/header';
+import FilterGuests from '../guest/filter-guests';
 import GuestForm from '../guest/guest-form';
+import ViewGuests from '../guest/view-guests';
 
 export default class GuestList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      guests: []
+      guests: [],
+      number: 0
     };
     this.addGuest = this.addGuest.bind(this);
+    this.getFilteredGuests = this.getFilteredGuests.bind(this);
+    this.getAllGuests = this.getAllGuests.bind(this);
   }
 
   componentDidMount() {
@@ -19,11 +24,25 @@ export default class GuestList extends React.Component {
     fetch('/api/guests')
       .then(res => res.json())
       .then(guests => {
+        const number = guests.length;
         this.setState({
-          guests
+          guests,
+          number
         });
       })
       .catch(err => console.error(err));
+  }
+
+  getFilteredGuests(newStatus) {
+    fetch(`/api/guests/${newStatus}`)
+      .then(res => res.json())
+      .then(guests => {
+        const number = guests.length;
+        this.setState({
+          guests,
+          number
+        });
+      });
   }
 
   addGuest(newGuest) {
@@ -38,9 +57,7 @@ export default class GuestList extends React.Component {
       .then(newGuest => {
         const newArray = this.state.guests.slice();
         newArray.push(newGuest);
-        this.setState({
-          guests: newArray
-        });
+        this.getAllGuests();
       })
       .catch(err => console.error(err));
   }
@@ -49,6 +66,8 @@ export default class GuestList extends React.Component {
     return (
       <>
         <Header />
+        <FilterGuests filterGuests={this.getFilteredGuests} showAllGuests={this.getAllGuests} number={this.state.number} />
+        <ViewGuests guests={this.state.guests} />
         <GuestForm onSubmit={this.addGuest}/>
       </>
     );
