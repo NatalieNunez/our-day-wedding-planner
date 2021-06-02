@@ -29,8 +29,6 @@
   background-color: #e1eff0;
   display: flex;
   align-items: center;
-
-  /* margin-bottom: 2rem; */
 }
 
 .logo {
@@ -325,6 +323,7 @@ button.view-btn {
   padding: 5px 10px;
   font-size: 12px;
   color: #7d7d7d;
+  cursor: pointer;
 }
 
 .filter-bar {
