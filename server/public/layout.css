@@ -64,3 +64,25 @@ input.profile-input {
 .hidden {
   display: none;
 }
+
+.profile-btn-div {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5rem 0;
+}
+
+.home-header {
+  height: 12rem;
+  margin: 0.5rem;
+  background-color: rgb(211, 211, 211);
+  padding: 1rem 0;
+  display: flex;
+}
+
+.couple-names {
+  padding: 0 2rem;
+  font-family: 'Tangerine', cursive;
+  font-weight: 100;
+  font-size: 2rem;
+  color: #737373;
+}

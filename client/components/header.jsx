@@ -1,63 +1,55 @@
 import React from 'react';
-import SideNav from './side-nav';
+// import SideNav from './side-nav';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
     this.state = {
       navOpen: false
     };
   }
 
-  handleClick() {
-    this.setState({
-      navOpen: true
-    });
+  toggleNav(event) {
+    const navOpen = this.state.navOpen;
+    if (event.target.className === 'nav-open' || event.target.className === 'logo-header') {
+      this.setState({
+        navOpen: !navOpen
+      });
+    }
   }
 
   render() {
-    if (this.state.navOpen) {
-      return (
-        <>
-        <div className="header">
-          <div className="logo">
-            <a className="logo-text" href="#" onClick={this.handleClick}>
-              Our Day
-            </a>
+    const navOpen = this.state.navOpen;
+    return (
+      <>
+      <div className={navOpen ? 'nav-open' : 'nav-close'} onClick={this.toggleNav}>
+        <div className="nav-box">
+          <div className="header">
+            <div className="logo nav-logo">
+              <a className="logo-text" href="#">Our Day</a>
+            </div>
           </div>
-          <span id="current-page">Profile</span>
+          <a className="nav-links" href="#profile">Profile</a>
+          <div className="divider profile"></div>
+          <a className="nav-links" href="#guests">Guest List</a>
+          <div className="divider profile"></div>
+          <a className="nav-links" href="#">Budget</a>
+          <div className="divider profile"></div>
         </div>
-        <SideNav />
-        </>
-      );
-    } else {
-      return (
-        <div className="header">
-          <div className="logo">
-            <a className="logo-text" href="#" onClick={this.handleClick}>
-              Our Day
-            </a>
-          </div>
-          <span id="current-page">Profile</span>
+      </div>
+
+      <div className="header">
+        <div className="logo">
+          <a className="logo-header" href="#" onClick={this.toggleNav}>
+            Our Day
+          </a>
         </div>
-      );
-    }
+        <span id="current-page">Profile</span>
+      </div>
+      </>
+    );
   }
 }
-
-// function Header(props) {
-//   return (
-//     // clicking logo should open nav
-//     <div className="header">
-//       <div className="logo">
-//         <a className="logo-text" href="#" toggleNav={props.toggleNav}>
-//           Our Day
-//         </a>
-//       </div>
-//       <span id="current-page">Profile</span>
-//     </div>
-//   );
-// }
 
 export default Header;

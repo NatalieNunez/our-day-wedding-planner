@@ -28,17 +28,20 @@
   height: 100px;
   background-color: #e1eff0;
   display: flex;
-  justify-content: center;
+
+  /* justify-content: center; */
   align-items: center;
 }
 
 .logo {
-  position: absolute;
+  /* position: absolute; */
+  margin: 0 1rem;
   background-color: white;
   width: 50px;
   height: 50px;
-  left: 15px;
-  top: 15px;
+
+  /* left: 15px;
+  top: 15px; */
   border-radius: 50%;
   box-shadow: 0 3px 5px grey;
   display: flex;
@@ -49,7 +52,7 @@
 
 .nav-logo {
   position: absolute;
-  left: 4rem;
+  left: 3.5rem;
   top: 1.5rem;
 }
 
@@ -57,9 +60,11 @@
   font-family: 'Stalemate', cursive;
   font-size: 3rem;
   color: rgb(87, 85, 83);
+  margin: 0 4rem;
 }
 
-.logo-text {
+.logo-text,
+.logo-header {
   font-family: 'Stalemate', cursive;
   text-decoration: none;
   color: #979595;
@@ -244,9 +249,9 @@ i.true {
 
 .edit-profile,
 .save-profile {
-  position: absolute;
+  /* position: absolute;
   bottom: 4rem;
-  right: 3rem;
+  right: 3rem; */
   width: 6rem;
   padding: 0.5rem;
   font-family: 'Montserrat', sans-serif;

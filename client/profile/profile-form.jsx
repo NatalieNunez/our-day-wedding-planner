@@ -80,8 +80,9 @@ class ProfileForm extends React.Component {
             <label className="profile-info">Wedding Date</label>
             <span className="profile-input">{this.state.weddingDate}</span>
             <div className="divider profile"></div>
-
-            <button type="button" className="edit-profile" onClick={this.handleClick}>Edit</button>
+            <div className="profile-btn-div">
+              <button type="button" className="edit-profile" onClick={this.handleClick}>Edit</button>
+            </div>
           </div>
 
           <form className={`profile-form ${this.state.editViewOpen ? 'show' : 'hidden'}`} onSubmit={this.handleSubmit}>
@@ -117,7 +118,9 @@ class ProfileForm extends React.Component {
             onChange={this.handleChange}
             />
             <div className="divider profile"></div>
-            <button type="submit" className="save-profile" onClick={this.handleClick} >Save</button>
+            <div className="profile-btn-div">
+              <button type="submit" className="save-profile" onClick={this.handleClick} >Save</button>
+            </div>
           </form>
         </div>
       </>
