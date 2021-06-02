@@ -61,6 +61,23 @@ app.get('/api/guests', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.get('/api/guests/:status', (req, res, next) => {
+  const status = req.params.status;
+  const sql = `
+    select *
+      from "guests"
+      where "status" = $1
+      order by lower("firstName")
+      `;
+  const params = [status];
+
+  db.query(sql, params)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => next(err));
+});
+
 app.post('/api/guests', (req, res, next) => {
   const { firstName, lastName, status } = req.body;
   const statusOptions = ['invited', 'attending', 'not attending'];
