@@ -29,6 +29,7 @@
   background-color: #e1eff0;
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .logo {
@@ -54,7 +55,7 @@
   font-family: 'Stalemate', cursive;
   font-size: 3rem;
   color: rgb(87, 85, 83);
-  margin: 0 4rem;
+  margin: 0 3.5rem;
 }
 
 .logo-text,
@@ -284,8 +285,17 @@ i.true {
 }
 
 a.nav-links {
-  margin: 1rem;
+  margin: 2rem 1rem;
   font-size: 1.5rem;
   cursor: pointer;
   text-align: center;
+  text-decoration: none;
+}
+
+#profile-link {
+  color: #94dee2;
+}
+
+#guest-link {
+  color: rgb(49, 144, 149);
 }

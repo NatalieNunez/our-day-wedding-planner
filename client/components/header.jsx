@@ -1,13 +1,29 @@
 import React from 'react';
 import SideNav from './side-nav';
+// import parseRoute from './lib/parse-route';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.state = {
-      navOpen: false
+      navOpen: false,
+      title: ''
     };
+  }
+
+  componentDidMount() {
+    const location = window.location.hash;
+    if (location === '#profile') {
+      this.setState({
+        title: 'Profile'
+      });
+    }
+    if (location === '#guests') {
+      this.setState({
+        title: 'Guest List'
+      });
+    }
   }
 
   handleClick() {
@@ -29,7 +45,7 @@ class Header extends React.Component {
               Our Day
             </button>
           </div>
-          <span id="current-page">Profile</span>
+          <span id="current-page">{this.state.title}</span>
         </div>
         </>
       );
@@ -41,7 +57,7 @@ class Header extends React.Component {
               Our Day
             </button>
           </div>
-          <span id="current-page">Profile</span>
+          <span id="current-page">{this.state.title}</span>
         </div>
       );
     }

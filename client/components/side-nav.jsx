@@ -19,9 +19,9 @@ class SideNav extends React.Component {
               <a className="logo-text" href="#">Our Day</a>
             </div>
           </div>
-          <a className="nav-links" href="#profile">Profile</a>
+          <a className="nav-links" href="#profile" id="profile-link">Profile</a>
           <div className="divider profile"></div>
-          <a className="nav-links" href="#guests">Guest List</a>
+          <a className="nav-links" href="#guests" id="guest-link">Guest List</a>
           <div className="divider profile"></div>
         </div>
       </div>
