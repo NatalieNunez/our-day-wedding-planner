@@ -90,3 +90,8 @@ input.profile-input {
   justify-content: space-between;
   margin: 1rem;
 }
+
+#guest-container {
+  overflow: scroll;
+  height: 27rem;
+}
