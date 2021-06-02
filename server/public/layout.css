@@ -93,5 +93,16 @@ input.profile-input {
 
 #guest-container {
   overflow: scroll;
-  height: 27rem;
+  height: 24rem;
+  margin: 1rem 0;
+}
+
+.view-options {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem 0;
+}
+
+.number-guests {
+  margin: 2rem;
 }
