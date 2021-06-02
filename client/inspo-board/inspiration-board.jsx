@@ -50,7 +50,6 @@ class InspirationBoard extends React.Component {
     return (
       <>
         <div id='inspo-board'>
-          {/* <span id='inspo-board-header'>Inspiration Board</span> */}
           <UploadPhotos submitUpdate={this.checkSubmit} />
           <InspoImages images={this.state.images} />
         </div>

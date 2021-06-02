@@ -1,28 +1,23 @@
 import React from 'react';
 import SideNav from './side-nav';
-// import parseRoute from './lib/parse-route';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.getTitle = this.getTitle.bind(this);
     this.state = {
-      navOpen: false,
-      title: ''
+      navOpen: false
     };
   }
 
-  componentDidMount() {
+  getTitle() {
     const location = window.location.hash;
     if (location === '#profile') {
-      this.setState({
-        title: 'Profile'
-      });
+      return 'Profile';
     }
     if (location === '#guests') {
-      this.setState({
-        title: 'Guest List'
-      });
+      return 'Guest List';
     }
   }
 
@@ -38,15 +33,15 @@ class Header extends React.Component {
     if (navOpen) {
       return (
         <>
-        <SideNav isNavOpen={this.handleClick} />
-        <div className="header">
-          <div className="logo">
-            <button className="logo-header" onClick={this.handleClick}>
-              Our Day
-            </button>
+          <SideNav isNavOpen={this.handleClick} />
+          <div className="header">
+            <div className="logo">
+              <button className="logo-header" onClick={this.handleClick}>
+                Our Day
+              </button>
+            </div>
+            <span id="current-page">{this.getTitle()}</span>
           </div>
-          <span id="current-page">{this.state.title}</span>
-        </div>
         </>
       );
     } else {
@@ -57,7 +52,7 @@ class Header extends React.Component {
               Our Day
             </button>
           </div>
-          <span id="current-page">{this.state.title}</span>
+          <span id="current-page">{this.getTitle()}</span>
         </div>
       );
     }
