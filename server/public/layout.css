@@ -84,3 +84,9 @@ input.profile-input {
   font-size: 2rem;
   color: #737373;
 }
+
+.guest-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}

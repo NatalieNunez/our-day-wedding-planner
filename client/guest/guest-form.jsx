@@ -118,15 +118,15 @@ class GuestForm extends React.Component {
                   onChange={this.optionChange} />
                   <i className={`fas fa-check ${this.state.status === 'attending'}`}></i>
                 </label>
-                <label className={`radio-label not-attending ${this.state.status === 'not-attending'}`}>Not Attending
+                <label className={`radio-label not-attending ${this.state.status === 'not attending'}`}>Not Attending
                   <input
                   type="radio"
                   name="status"
-                  value="not-attending"
-                  className={`radio-custom ${this.state.status === 'not-attending'}`}
+                  value="not attending"
+                  className={`radio-custom ${this.state.status === 'not attending'}`}
                   checked={this.state.status === 'not-attending'}
                   onChange={this.optionChange} />
-                  <i className={`fas fa-check ${this.state.status === 'not-attending'}`}></i>
+                  <i className={`fas fa-check ${this.state.status === 'not attending'}`}></i>
                 </label>
               </div>
             </div>

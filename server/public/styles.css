@@ -208,17 +208,20 @@ input[type="radio"] {
   opacity: 0;
 }
 
-label.invited {
+label.invited,
+.inv {
   background-color: #c9eaff;
   color: #108a9b;
 }
 
-label.attending {
+label.attending,
+.att {
   background-color: #b4ffbf;
   color: #01831d;
 }
 
-label.not-attending {
+label.not-attending,
+.not {
   background-color: #ffdcdc;
   color: #ad1111;
 }
@@ -298,4 +301,14 @@ a.nav-links {
 
 #guest-link {
   color: rgb(49, 144, 149);
+}
+
+#guest-container {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.guest-status {
+  font-size: 0.7rem;
+  border-radius: 1rem;
+  padding: 5px;
 }

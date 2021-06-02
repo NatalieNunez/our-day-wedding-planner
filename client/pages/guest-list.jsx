@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/header';
 import GuestForm from '../guest/guest-form';
+import ViewGuests from '../guest/view-guests';
 
 export default class GuestList extends React.Component {
   constructor(props) {
@@ -38,9 +39,7 @@ export default class GuestList extends React.Component {
       .then(newGuest => {
         const newArray = this.state.guests.slice();
         newArray.push(newGuest);
-        this.setState({
-          guests: newArray
-        });
+        this.getAllGuests();
       })
       .catch(err => console.error(err));
   }
@@ -49,6 +48,7 @@ export default class GuestList extends React.Component {
     return (
       <>
         <Header />
+        <ViewGuests guests={this.state.guests} />
         <GuestForm onSubmit={this.addGuest}/>
       </>
     );
