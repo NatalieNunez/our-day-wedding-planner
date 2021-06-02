@@ -28,17 +28,15 @@
   height: 100px;
   background-color: #e1eff0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .logo {
-  position: absolute;
+  margin: 0 1rem;
   background-color: white;
   width: 50px;
   height: 50px;
-  left: 15px;
-  top: 15px;
   border-radius: 50%;
   box-shadow: 0 3px 5px grey;
   display: flex;
@@ -47,17 +45,27 @@
   cursor: pointer;
 }
 
+.nav-logo {
+  position: absolute;
+  left: 3rem;
+  top: 1.5rem;
+}
+
 #current-page {
   font-family: 'Stalemate', cursive;
   font-size: 3rem;
   color: rgb(87, 85, 83);
+  margin: 0 3.5rem;
 }
 
-.logo-text {
+.logo-text,
+.logo-header {
   font-family: 'Stalemate', cursive;
   text-decoration: none;
   color: #979595;
   cursor: pointer;
+  border: none;
+  background-color: white;
 }
 
 .guest-footer {
@@ -238,9 +246,6 @@ i.true {
 
 .edit-profile,
 .save-profile {
-  position: absolute;
-  bottom: 4rem;
-  right: 3rem;
   width: 6rem;
   padding: 0.5rem;
   font-family: 'Montserrat', sans-serif;
@@ -255,4 +260,42 @@ i.true {
 
 .divider.profile {
   height: 1px;
+}
+
+.nav-open {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-close {
+  display: none;
+}
+
+.nav-box {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+a.nav-links {
+  margin: 2rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+#profile-link {
+  color: #94dee2;
+}
+
+#guest-link {
+  color: rgb(49, 144, 149);
 }

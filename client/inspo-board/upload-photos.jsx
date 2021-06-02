@@ -33,6 +33,7 @@ class UploadPhotos extends React.Component {
   render() {
     return (
       <form id="upload-form" onChange={this.handleSubmit}>
+        <span id='inspo-board-header'>Inspiration Board</span>
         <input type="file" name="file" ref={this.fileInputRef} hidden/>
         <button className="upload-btn" type="button" onClick={this.handleUploadClick}>
           <i className="fas fa-plus upload-icon"></i>

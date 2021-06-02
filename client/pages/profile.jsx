@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../header';
+import Header from '../components/header';
 import ProfileForm from '../profile/profile-form';
 
 export default class Profile extends React.Component {
@@ -35,7 +35,8 @@ export default class Profile extends React.Component {
     return (
       <>
         <Header />
-        <ProfileForm onSubmit={this.updateProfile} onClick={this.changeView} />
+        <ProfileForm onSubmit={this.updateProfile} />
+
       </>
     );
   }
