@@ -8,7 +8,8 @@ export default class GuestList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      guests: []
+      guests: [],
+      number: 0
     };
     this.addGuest = this.addGuest.bind(this);
     this.getFilteredGuests = this.getFilteredGuests.bind(this);
@@ -23,8 +24,10 @@ export default class GuestList extends React.Component {
     fetch('/api/guests')
       .then(res => res.json())
       .then(guests => {
+        const number = guests.length;
         this.setState({
-          guests
+          guests,
+          number
         });
       })
       .catch(err => console.error(err));
@@ -34,8 +37,10 @@ export default class GuestList extends React.Component {
     fetch(`/api/guests/${newStatus}`)
       .then(res => res.json())
       .then(guests => {
+        const number = guests.length;
         this.setState({
-          guests
+          guests,
+          number
         });
       });
   }
@@ -61,7 +66,7 @@ export default class GuestList extends React.Component {
     return (
       <>
         <Header />
-        <FilterGuests filterGuests={this.getFilteredGuests} showAllGuests={this.getAllGuests}/>
+        <FilterGuests filterGuests={this.getFilteredGuests} showAllGuests={this.getAllGuests} number={this.state.number} />
         <ViewGuests guests={this.state.guests} />
         <GuestForm onSubmit={this.addGuest}/>
       </>

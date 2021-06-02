@@ -5,9 +5,6 @@ class FilterGuests extends React.Component {
     super(props);
     this.changeView = this.changeView.bind(this);
     this.allGuests = this.allGuests.bind(this);
-    this.state = {
-      number: 0
-    };
   }
 
   changeView(event) {
@@ -28,7 +25,7 @@ class FilterGuests extends React.Component {
           <button className="view-btn" onClick={this.changeView}>Attending</button>
           <button className="view-btn" onClick={this.changeView}>Not Attending</button>
         </div>
-        <span className="number-guests">{`${this.state.number} guests`}</span>
+        <span className="number-guests">{`${this.props.number} guests`}</span>
         <div className="divider filter-guests"></div>
       </div>
     );
