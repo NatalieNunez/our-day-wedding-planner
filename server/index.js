@@ -151,6 +151,35 @@ app.get('/api/users', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.put('/api/budget', (req, res, next) => {
+  const { budgetTotal } = req.body;
+  const params = [budgetTotal];
+  if (!budgetTotal) {
+    res.status(400).json({
+      error: 'budgetTotal is a required field'
+    });
+    return;
+  }
+  if (!Number(budgetTotal) || Number(budgetTotal) <= 0) {
+    res.status(400).json({
+      error: 'budgetTotal must be a positive integer'
+    });
+    return;
+  }
+
+  const sql = `
+  update "budget"
+    set "budgetTotal" = $1
+    where "budgetId" = 1
+  `;
+
+  db.query(sql, params)
+    .then(result => {
+      res.status(200).json(result.rows[0]);
+    })
+    .catch(err => next(err));
+});
+
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {

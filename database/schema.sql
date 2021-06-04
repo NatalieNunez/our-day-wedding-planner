@@ -8,34 +8,32 @@ create schema "public";
 
 create table "images" (
     "imageId"    serial,
-    "url"        text               not null,
-    "createdAt"  timestamptz(6)     not null default now(),
+    "url"        text                not null,
+    "createdAt"  timestamptz(6)      not null default now(),
     primary key ("imageId")
 );
 
 create table "guests" (
     "guestId"    serial,
-    "firstName"  text               not null,
-    "lastName"   text               not null,
-    "status"     text               not null,
-    "createdAt"  timestamptz(6)     not null default now(),
+    "firstName"  text                not null,
+    "lastName"   text                not null,
+    "status"     text                not null,
+    "createdAt"  timestamptz(6)      not null default now(),
     primary key ("guestId")
 );
 
 create table "users" (
     "userId"        serial,
-    "userName"      text            not null,
-    "partnerName"   text            not null,
-    "weddingDate"   text            not null,
-    "createdAt"     timestamptz(6)  not null default now(),
+    "userName"      text             not null,
+    "partnerName"   text             not null,
+    "weddingDate"   text             not null,
+    "createdAt"     timestamptz(6)   not null default now(),
     primary key ("userId")
 );
 
 create table "budget" (
     "budgetId"       serial,
-    "budgetTotal"    number         not null,
-    "spent"          number         not null,
-    "remaining"      number         not null,
-    "createdAt"      timestamptz(6) not null default now(),
+    "budgetTotal"    integer         not null,
+    "createdAt"      timestamptz(6)  not null default now(),
     primary key ("budgetId")
 );
