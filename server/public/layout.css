@@ -106,3 +106,22 @@ input.profile-input {
 .number-guests {
   margin: 2rem;
 }
+
+.budget-div {
+  height: 7.5rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.budget-total {
+  display: block;
+  margin: 1rem 0;
+}
+
+.edit-budg-icon {
+  margin: 0 1rem;
+}
+
+.budget-form {
+  margin-top: 1rem;
+}

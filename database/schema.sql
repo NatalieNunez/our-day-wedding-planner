@@ -33,7 +33,7 @@ create table "users" (
 
 create table "budget" (
     "budgetId"       serial,
-    "budgetTotal"    integer         not null,
+    "budgetTotal"    text            not null,
     "createdAt"      timestamptz(6)  not null default now(),
     primary key ("budgetId")
 );

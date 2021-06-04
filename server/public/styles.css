@@ -334,3 +334,23 @@ button.view-btn {
 .number-guests {
   font-size: 14px;
 }
+
+.budget-div {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f7f7f7;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 5px grey;
+}
+
+.edit-budg-icon {
+  color: #199095;
+  font-size: 12px;
+}
+
+button.save-budget {
+  display: block;
+  border: none;
+  margin: 0.5rem 0;
+  background-color: #f7f7f7;
+  color: #199095;
+}

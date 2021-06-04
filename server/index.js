@@ -151,6 +151,20 @@ app.get('/api/users', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.get('/api/budget', (req, res, next) => {
+  const sql = `
+  select *
+    from "budget"
+    where "budgetId" = 1
+  `;
+
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => next(err));
+});
+
 app.put('/api/budget', (req, res, next) => {
   const { budgetTotal } = req.body;
   const params = [budgetTotal];
@@ -171,6 +185,7 @@ app.put('/api/budget', (req, res, next) => {
   update "budget"
     set "budgetTotal" = $1
     where "budgetId" = 1
+    returning *
   `;
 
   db.query(sql, params)
