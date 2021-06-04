@@ -53,12 +53,13 @@ class EditBudget extends React.Component {
     const editOpen = this.state.editOpen;
     return (
       <div className="budget-div">
-        <label>Total Budget</label>
+        <label className="budget-label">Total Budget</label>
         {
           editOpen
             ? <form className="budget-form" onSubmit={this.handleSubmit}>
-                <input type="text" placeholder={`$ ${this.state.budgetTotal}`} onChange={this.handleChange} required/>
+                <input className="budget-input" type="text" placeholder={`$ ${this.state.budgetTotal}`} onChange={this.handleChange} required/>
                 <button type="submit" className="save-budget">Save</button>
+                <button type="button" className="cancel-budget" onClick={this.toggleForm}>Cancel</button>
               </form>
             : <span className="budget-total">{`$ ${this.state.budgetTotal}`}
                 <i className="fas fa-pen edit-budg-icon" onClick={this.toggleForm}></i>

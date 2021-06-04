@@ -125,3 +125,7 @@ input.profile-input {
 .budget-form {
   margin-top: 1rem;
 }
+
+.budget-input {
+  display: block;
+}

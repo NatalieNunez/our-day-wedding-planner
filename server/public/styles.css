@@ -304,7 +304,11 @@ a.nav-links {
 }
 
 #guest-link {
-  color: rgb(49, 144, 149);
+  color: rgb(64, 168, 173);
+}
+
+#budget-link {
+  color: rgb(23, 87, 90);
 }
 
 #guest-container {
@@ -337,7 +341,7 @@ button.view-btn {
 
 .budget-div {
   font-family: 'Montserrat', sans-serif;
-  background-color: #f7f7f7;
+  background-color: #fcfcfc;
   border-radius: 0.5rem;
   box-shadow: 0 3px 5px grey;
 }
@@ -347,10 +351,15 @@ button.view-btn {
   font-size: 12px;
 }
 
-button.save-budget {
-  display: block;
+button.save-budget,
+button.cancel-budget {
   border: none;
-  margin: 0.5rem 0;
-  background-color: #f7f7f7;
+  margin: 0.5rem;
+  background-color: #fcfcfc;
   color: #199095;
+}
+
+.budget-label,
+.budget-total {
+  color: rgb(49, 144, 149);
 }
