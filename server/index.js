@@ -3,6 +3,7 @@ const pg = require('pg');
 const express = require('express');
 const errorMiddleware = require('./error-middleware');
 const uploadsMiddleware = require('./uploads-middleware');
+const staticMiddleware = require('./static-middleware');
 
 const db = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
@@ -16,6 +17,8 @@ const app = express();
 const jsonMiddleware = express.json();
 
 app.use(jsonMiddleware);
+
+app.use(staticMiddleware);
 
 app.post('/api/uploads', uploadsMiddleware, (req, res, next) => {
   const imageUrl = req.file.location;
