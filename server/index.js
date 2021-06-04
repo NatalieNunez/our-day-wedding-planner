@@ -18,7 +18,7 @@ const jsonMiddleware = express.json();
 app.use(jsonMiddleware);
 
 app.post('/api/uploads', uploadsMiddleware, (req, res, next) => {
-  const imageUrl = `/images/${req.file.filename}`;
+  const imageUrl = req.file.location;
   const sql = `
   insert into "images" ("url")
     values ($1)
