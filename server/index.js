@@ -195,6 +195,20 @@ app.put('/api/budget', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.get('/api/budget-items', (req, res, next) => {
+  const sql = `
+  select *
+    from "budgetItems"
+    order by "itemId" desc
+  `;
+
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => next(err));
+});
+
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {
