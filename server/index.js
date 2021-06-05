@@ -209,6 +209,38 @@ app.get('/api/budget-items', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.post('/api/budget-items', (req, res, next) => {
+  const { item } = req.body;
+  const estimate = parseInt(req.body.estimate, 10);
+  if (!item || !estimate) {
+    res.status(400).json({
+      error: 'item and estimate are both requried fields'
+    });
+    return;
+  }
+  if (!Number.isInteger(estimate) || estimate <= 0) {
+    res.status(400).json({
+      error: 'estimate must be a positive integer'
+    });
+    return;
+  }
+
+  const sql = `
+  insert into "budgetItems" ("item", "estimate")
+  values ($1, $2)
+  returning *
+  `;
+
+  const values = [item, estimate];
+
+  db.query(sql, values)
+    .then(result => {
+      const [newItem] = result.rows;
+      res.status(201).json(newItem);
+    })
+    .catch(err => next(err));
+});
+
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {

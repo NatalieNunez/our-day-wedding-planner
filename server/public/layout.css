@@ -142,3 +142,24 @@ input.profile-input {
 .budget-row {
   flex-basis: calc(100% / 3);
 }
+
+.budget-item-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 3px grey;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(117, 117, 117);
+}
+
+div#budget-container {
+  overflow: scroll;
+  height: 21rem;
+}
+
+.estimate {
+  color: rgb(41, 168, 162);
+}
