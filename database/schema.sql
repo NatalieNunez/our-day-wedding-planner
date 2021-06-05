@@ -37,3 +37,11 @@ create table "budget" (
     "createdAt"      timestamptz(6)  not null default now(),
     primary key ("budgetId")
 );
+
+create table "budgetItems" (
+    "itemId"         serial,
+    "item"           text            not null,
+    "estimate"       text            not null,
+    "createdAt"      timestamptz(6)  not null default now(),
+    primary key ("itemId")
+);

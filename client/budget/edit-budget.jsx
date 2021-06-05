@@ -2,7 +2,6 @@ import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
 const config = {
-  // labels: ['Spent', 'Remaining'],
   datasets: [
     {
       label: 'Budget',
@@ -14,12 +13,13 @@ const config = {
         '#1b9096',
         '#94dee2'
       ],
-      data: [65, 59]
+      data: [20000, 0]
     }
   ]
 };
 
 class DoughnutChart extends React.Component {
+
   render() {
     return (
       <Doughnut
