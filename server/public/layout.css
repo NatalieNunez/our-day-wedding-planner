@@ -91,6 +91,25 @@ input.profile-input {
   margin: 1rem;
 }
 
+#guest-modal,
+#budget-modal {
+  display: none;
+}
+
+#guest-modal-box,
+#budget-modal-box {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  position: relative;
+  top: 10rem;
+  height: 17rem;
+}
+
+#budget-modal-box {
+  height: 13rem;
+}
+
 #guest-container {
   overflow: scroll;
   height: 24rem;
@@ -148,11 +167,11 @@ input.profile-input {
   justify-content: space-between;
   margin: 1rem;
   padding: 1rem;
-  background-color: whitesmoke;
+  background-color: #fafafa;
   box-shadow: 0 1px 3px grey;
   border-radius: 8px;
   font-family: 'Montserrat', sans-serif;
-  color: rgb(117, 117, 117);
+  color: rgb(92, 92, 92);
 }
 
 div#budget-container {

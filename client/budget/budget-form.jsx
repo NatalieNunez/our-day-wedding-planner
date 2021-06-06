@@ -50,37 +50,38 @@ class BudgetForm extends React.Component {
     const modalOpen = this.state.modalOpen;
     return (
       <>
-      <div className="guest-footer">
-        <h4 className="add-guest-text" onClick={this.toggleModal}>Add an item</h4>
-        <button className="add-guest-btn" onClick={this.toggleModal}>
-          <i className="fas fa-plus add-guest-icon"></i>
+      <div className="budget-footer">
+        <h4 className="add-budget-text" onClick={this.toggleModal}>Add an item</h4>
+        <button className="add-budget-btn" onClick={this.toggleModal}>
+          <i className="fas fa-plus add-budget-icon"></i>
         </button>
       </div>
-      <div id={modalOpen ? 'modal-open' : 'guest-modal'}>
-          <div id="guest-modal-box">
-            <form id="guest-form" onSubmit={this.handleSubmit}>
+      <div id={modalOpen ? 'modal-open' : 'budget-modal'}>
+          <div id="budget-modal-box">
+            <form id="budget-item-form" onSubmit={this.handleSubmit}>
               <div className="modal-btns">
-                <button className="guest-btn close" type="button" onClick={this.toggleModal}>Close</button>
-                <button className="guest-btn save" type="submit">Save</button>
+                <button className="budget-btn close" type="button" onClick={this.toggleModal}>Close</button>
+                <button className="budget-btn save" type="submit">Save</button>
               </div>
               <div className="row">
                 <div className="divider"></div>
-                <label className="add-guest-label">Add Item</label>
+                <label className="add-budget-label">Add Item</label>
                 <div className="inputs">
                   <input
                   required
                   autoFocus
-                  id="first-name"
+                  id="item"
                   type="text"
                   name="budget-item"
+                  placeholder="Budget Item"
                   defaultValue={this.state.item}
                   onChange={this.handleChange}/>
 
                   <input
                   required
                   autoFocus
-                  id="last-name"
-                  placeholder="$estimate"
+                  id="estimate"
+                  placeholder="Estimate"
                   type="text"
                   name="estimate"
                   defaultValue={this.state.estimate}

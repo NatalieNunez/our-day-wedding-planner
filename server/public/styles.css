@@ -67,8 +67,9 @@
   background-color: white;
 }
 
-.guest-footer {
-  background-color: #ececec;
+.guest-footer,
+.budget-footer {
+  background-color: #5dd9df;
   position: absolute;
   bottom: 0;
   display: flex;
@@ -77,51 +78,49 @@
   justify-content: space-between;
 }
 
-.add-guest-text {
-  color: red;
+.add-guest-text,
+.add-budget-text {
+  color: rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
   cursor: pointer;
   margin: 0;
 }
 
-.add-guest-btn {
+.add-guest-btn,
+.add-budget-btn {
   height: 25px;
   width: 25px;
   border: none;
   border-radius: 50%;
-  background-color: rgb(226, 40, 40);
+  background-color: #5dd9df;
   cursor: pointer;
 }
 
-.add-guest-icon {
+.add-guest-icon,
+.add-budget-icon {
   color: white;
-  font-size: 12px;
-  text-shadow: 0 2px 3px #d2d2d2;
+  font-size: 1.2rem;
+  text-shadow: 0 2px 3px #15898f;
 }
 
-#guest-modal {
-  display: none;
-}
-
-#guest-modal-box {
+#guest-modal-box,
+#budget-modal-box {
   background-color: rgb(255, 255, 255);
-  width: 80%;
-  display: flex;
-  margin: auto;
-  position: relative;
-  top: 10rem;
-  height: 17rem;
 }
 
-#guest-form {
+#guest-form,
+#budget-item-form {
   width: 300px;
 }
 
-#first-name {
+#first-name,
+#item {
   margin: 1rem 0.5rem 1rem 1rem;
 }
 
-#last-name {
+#last-name,
+#estimate {
   margin: 1rem 1rem 1rem 0.5rem;
 }
 
@@ -130,16 +129,19 @@
   height: 10px;
 }
 
-.guest-btn {
+.guest-btn,
+.budget-btn {
   border: none;
   outline: none;
   color: #289aec;
   background-color: white;
   font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-.guest-btn.save {
+.guest-btn.save,
+.budget-btn.save {
   position: absolute;
   right: 15px;
 }
@@ -150,7 +152,8 @@
   height: 3px;
 }
 
-.add-guest-label {
+.add-guest-label,
+.add-budget-label {
   margin: 0 1.5rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;

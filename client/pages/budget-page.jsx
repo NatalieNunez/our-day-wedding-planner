@@ -13,6 +13,7 @@ export default class BudgetPage extends React.Component {
     };
     this.updateBudget = this.updateBudget.bind(this);
     this.getAllItems = this.getAllItems.bind(this);
+    this.addBudgetItem = this.addBudgetItem.bind(this);
   }
 
   componentDidMount() {
