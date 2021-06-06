@@ -15,9 +15,9 @@
 }
 
 #inspo-board {
-  height: 375px;
+  height: 360px;
   width: 95%;
-  margin: 5rem auto 0;
+  margin: 0.5rem auto 0;
 }
 
 #upload-form {
@@ -81,9 +81,11 @@ input.profile-input {
   margin: 0 auto;
   font-family: 'Tangerine', cursive;
   font-weight: 100;
-  font-size: 2rem;
-  color: #202020;
+  font-size: 2.5rem;
+  color: #5c5c5c;
   z-index: 1;
+  display: flex;
+  align-items: center;
 }
 
 .guest-row {
@@ -190,5 +192,15 @@ img.header-img {
   width: 100%;
   object-fit: cover;
   top: 0;
-  opacity: 60%;
+  opacity: 45%;
+}
+
+.days-div {
+  background-color: rgb(137 204 200);
+  height: 4rem;
+  width: 60%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 3px 4px #318883;
 }

@@ -1,17 +1,18 @@
 #inspo-board {
-  background-color: rgba(207, 207, 207, 0.5);
+  background-color: rgb(226 226 226 / 50%);
+  box-shadow: 0 1px 10px #bfbfbf;
 }
 
 #inspo-board-header {
   font-family: 'Montserrat', sans-serif;
-  color: rgb(176, 176, 176);
+  color: rgb(177, 177, 177);
   font-size: 1.25rem;
 }
 
 .upload-icon {
   color: white;
   font-size: 1.2rem;
-  text-shadow: 0 2px 3px #d2d2d2;
+  text-shadow: 0 2px 4px #989898;
 }
 
 .upload-icon:hover {
@@ -19,7 +20,6 @@
 }
 
 .upload-btn {
-  background-color: rgb(232, 232, 232);
   border: none;
   cursor: pointer;
 }
@@ -38,7 +38,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: 0 3px 5px grey;
+  box-shadow: 0 3px 8px grey;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -390,4 +390,12 @@ button.cancel-budget {
 .legend-text {
   font-size: 12px;
   margin: 0 0.5rem;
+}
+
+.days-left {
+  font-family: 'Tangerine', cursive;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
 }

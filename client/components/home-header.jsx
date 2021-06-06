@@ -29,6 +29,14 @@ class HomeHeader extends React.Component {
           image: users[0].image,
           weddingDate: users[0].weddingDate
         });
+        const weddingDate = new Date(this.state.weddingDate);
+        const today = new Date();
+        const oneDay = 1000 * 60 * 60 * 24;
+        const diffInTime = weddingDate.getTime() - today.getTime();
+        const daysLeft = Math.ceil(diffInTime / oneDay);
+        this.setState({
+          daysLeft
+        });
       });
   }
 
@@ -60,6 +68,7 @@ class HomeHeader extends React.Component {
       );
     } else {
       return (
+        <>
         <div className="home-header">
           <img className="header-img" src={this.state.image} alt="wedding-photo" />
           <div className="logo">
@@ -69,6 +78,10 @@ class HomeHeader extends React.Component {
           </div>
           <span className="couple-names">{`${userName} + ${partnerName}`}</span>
         </div>
+        <div className="days-div">
+          <span className="days-left">{`${this.state.daysLeft} days left`}</span>
+        </div>
+        </>
       );
     }
   }
