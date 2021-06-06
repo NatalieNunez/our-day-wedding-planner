@@ -21,7 +21,6 @@ export default class Profile extends React.Component {
     })
       .then(res => res.json())
       .then(update => {
-        // console.log(update);
         const newUsersArray = this.state.users.slice();
         newUsersArray.pop();
         newUsersArray.push(update);

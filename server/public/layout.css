@@ -72,17 +72,18 @@ input.profile-input {
 .home-header {
   height: 12rem;
   margin: 0.5rem;
-  background-color: rgb(211, 211, 211);
   padding: 1rem 0;
   display: flex;
+  position: relative;
 }
 
 .couple-names {
-  padding: 0 2rem;
+  margin: 0 auto;
   font-family: 'Tangerine', cursive;
   font-weight: 100;
   font-size: 2rem;
-  color: #737373;
+  color: #202020;
+  z-index: 1;
 }
 
 .guest-row {
@@ -181,4 +182,13 @@ div#budget-container {
 
 .estimate {
   color: rgb(41, 168, 162);
+}
+
+img.header-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  opacity: 60%;
 }

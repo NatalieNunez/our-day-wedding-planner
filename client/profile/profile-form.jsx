@@ -114,7 +114,6 @@ class ProfileForm extends React.Component {
             type="date"
             name="date"
             className="profile-input"
-            defaultValue={this.state.weddingDate}
             onChange={this.handleChange}
             />
             <div className="divider profile"></div>
