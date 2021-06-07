@@ -315,6 +315,10 @@ a.nav-links {
   color: rgb(23, 87, 90);
 }
 
+#todo-link {
+  color: rgb(11, 44, 46);
+}
+
 #guest-container {
   font-family: 'Montserrat', sans-serif;
 }
