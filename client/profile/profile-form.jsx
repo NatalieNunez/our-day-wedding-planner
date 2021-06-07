@@ -86,7 +86,7 @@ class ProfileForm extends React.Component {
           </div>
 
           <form className={`profile-form ${this.state.editViewOpen ? 'show' : 'hidden'}`} onSubmit={this.handleSubmit}>
-            <label className="profile-label" >Your Name</label>
+            <label className="profile-label">Your Name</label>
             <input
             required
             type="text"
@@ -114,7 +114,6 @@ class ProfileForm extends React.Component {
             type="date"
             name="date"
             className="profile-input"
-            defaultValue={this.state.weddingDate}
             onChange={this.handleChange}
             />
             <div className="divider profile"></div>

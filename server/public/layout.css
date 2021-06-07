@@ -15,9 +15,9 @@
 }
 
 #inspo-board {
-  height: 375px;
+  height: 360px;
   width: 95%;
-  margin: 5rem auto 0;
+  margin: 0.5rem auto 0;
 }
 
 #upload-form {
@@ -72,23 +72,45 @@ input.profile-input {
 .home-header {
   height: 12rem;
   margin: 0.5rem;
-  background-color: rgb(211, 211, 211);
   padding: 1rem 0;
   display: flex;
+  position: relative;
 }
 
 .couple-names {
-  padding: 0 2rem;
+  margin: 0 auto;
   font-family: 'Tangerine', cursive;
   font-weight: 100;
-  font-size: 2rem;
-  color: #737373;
+  font-size: 2.5rem;
+  color: #5c5c5c;
+  z-index: 1;
+  display: flex;
+  align-items: center;
 }
 
 .guest-row {
   display: flex;
   justify-content: space-between;
   margin: 1rem;
+}
+
+#guest-modal,
+#budget-modal {
+  display: none;
+}
+
+#guest-modal-box,
+#budget-modal-box {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  position: relative;
+  top: 10rem;
+  height: 17rem;
+}
+
+#budget-modal-box {
+  height: 13rem;
 }
 
 #guest-container {
@@ -105,4 +127,80 @@ input.profile-input {
 
 .number-guests {
   margin: 2rem;
+}
+
+.budget-div {
+  height: 7.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+}
+
+.budget-total {
+  display: block;
+  margin: 1rem 0;
+}
+
+.edit-budg-icon {
+  padding: 0 0.5rem;
+}
+
+.budget-form {
+  margin-top: 1rem;
+}
+
+.budget-input {
+  display: block;
+}
+
+.chart {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  right: 3rem;
+  top: 8rem;
+}
+
+.budget-row {
+  flex-basis: calc(100% / 3);
+}
+
+.budget-item-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #fafafa;
+  box-shadow: 0 1px 3px grey;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(92, 92, 92);
+}
+
+div#budget-container {
+  overflow: scroll;
+  height: 21rem;
+}
+
+.estimate {
+  color: rgb(41, 168, 162);
+}
+
+img.header-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  opacity: 45%;
+}
+
+.days-div {
+  background-color: rgb(137 204 200);
+  height: 4rem;
+  width: 60%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 3px 4px #318883;
 }

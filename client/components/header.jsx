@@ -19,6 +19,9 @@ class Header extends React.Component {
     if (location === '#guests') {
       return 'Guest List';
     }
+    if (location === '#budget') {
+      return 'Budget';
+    }
   }
 
   handleClick() {

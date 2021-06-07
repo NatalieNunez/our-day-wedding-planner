@@ -23,6 +23,10 @@ class SideNav extends React.Component {
           <div className="divider profile"></div>
           <a className="nav-links" href="#guests" id="guest-link">Guest List</a>
           <div className="divider profile"></div>
+          <a className="nav-links" href="#budget" id="budget-link">Budget</a>
+          <div className="divider profile"></div>
+          <a className="nav-links" href="#to-do" id="todo-link">I Do&apos;s</a>
+          <div className="divider profile"></div>
         </div>
       </div>
     );

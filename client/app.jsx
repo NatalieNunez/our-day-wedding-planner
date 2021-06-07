@@ -3,6 +3,7 @@ import Profile from './pages/profile';
 import Home from './pages/home';
 import GuestList from './pages/guest-list';
 import parseRoute from './lib/parse-route';
+import BudgetPage from './pages/budget-page';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -31,6 +32,9 @@ export default class App extends React.Component {
     }
     if (route.path === 'guests') {
       return <GuestList />;
+    }
+    if (route.path === 'budget') {
+      return <BudgetPage />;
     }
   }
 
