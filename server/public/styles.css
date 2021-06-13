@@ -1,6 +1,6 @@
 #inspo-board {
-  background-color: rgb(226 226 226 / 50%);
-  box-shadow: 0 1px 10px #bfbfbf;
+  /* background-color: rgb(226 226 226 / 50%);
+  box-shadow: 0 1px 10px #bfbfbf; */
 }
 
 #inspo-board-header {
@@ -10,9 +10,10 @@
 }
 
 .upload-icon {
-  color: white;
+  color: #99d8e1;
   font-size: 1.2rem;
-  text-shadow: 0 2px 4px #989898;
+
+  /* text-shadow: 0 2px 4px #989898; */
 }
 
 .upload-icon:hover {
@@ -22,6 +23,7 @@
 .upload-btn {
   border: none;
   cursor: pointer;
+  background-color: white;
 }
 
 .header {
@@ -35,8 +37,8 @@
   position: absolute;
   margin: 0 1rem;
   background-color: white;
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   box-shadow: 0 3px 8px grey;
   display: flex;
@@ -398,7 +400,8 @@ button.cancel-budget {
 
 .days-left {
   font-family: 'Tangerine', cursive;
-  display: flex;
+
+  /* display: flex; */
   justify-content: center;
   font-size: 2rem;
   color: white;

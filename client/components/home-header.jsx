@@ -64,6 +64,9 @@ class HomeHeader extends React.Component {
           </div>
           <span className="couple-names">{`${userName} & ${partnerName}`}</span>
         </div>
+        <div className="days-div">
+          <span className="days-left">{`${this.state.daysLeft} days left`}</span>
+        </div>
         </>
       );
     } else {
