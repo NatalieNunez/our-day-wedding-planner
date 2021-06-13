@@ -412,10 +412,6 @@ button.cancel-budget {
 
 .days-left {
   font-family: 'Tangerine', cursive;
-
-  /* display: flex; */
-
-  /* justify-content: center; */
   font-size: 6vmin;
   color: white;
 }
