@@ -15,7 +15,7 @@ class SideNav extends React.Component {
       <div className="nav-open" onClick={this.handleClick}>
         <div className="nav-box">
           <div className="header">
-            <div className="logo nav-logo">
+            <div className="nav-logo">
               <a className="logo-text" href="#">Our Day</a>
             </div>
           </div>

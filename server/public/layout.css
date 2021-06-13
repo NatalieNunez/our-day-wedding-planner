@@ -1,6 +1,6 @@
 #img-container {
-  max-width: 35rem;
-  height: 50vh;
+  max-width: 40rem;
+  height: 60vmax;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -15,8 +15,8 @@
 }
 
 #inspo-board {
-  height: 60vh;
-  max-width: 45rem;
+  height: 70vh;
+  max-width: 50rem;
   margin: 0.5rem auto 0;
 }
 
@@ -70,18 +70,19 @@ input.profile-input {
 }
 
 .home-header {
-  height: 20vh;
+  height: 12vmax;
   margin: 0.5rem;
   padding: 1rem 0;
   display: flex;
   position: relative;
+  background-color: #e1eff0;
 }
 
 .couple-names {
   margin: 0 auto;
   font-family: 'Tangerine', cursive;
   font-weight: 100;
-  font-size: 5vh;
+  font-size: 7.5vmin;
   color: #5c5c5c;
   z-index: 1;
   display: flex;
@@ -201,10 +202,26 @@ img.header-img {
   justify-content: center;
   align-items: center;
   background-color: rgb(137 204 200);
-  height: 3rem;
-  width: 45vw;
-  margin: 1rem auto;
+  height: 9vmin;
+  width: 37vmin;
+  margin: 4vmin auto;
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 0 3px 4px #318883;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo,
+  .nav-logo {
+    min-width: 4rem;
+    min-height: 4rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .logo,
+  .nav-logo {
+    min-width: 5rem;
+    min-height: 5rem;
+  }
 }

@@ -56,7 +56,7 @@ class HomeHeader extends React.Component {
         <>
         <SideNav isNavOpen={this.handleClick} />
         <div className="home-header">
-          <img className="header-img" src={this.state.image} alt="wedding-photo" />
+          {/* <img className="header-img" src={this.state.image} alt="wedding-photo" /> */}
           <div className="logo">
             <button className="logo-header" onClick={this.handleClick}>
               Our Day
@@ -73,7 +73,7 @@ class HomeHeader extends React.Component {
       return (
         <>
         <div className="home-header">
-          <img className="header-img" src={this.state.image} alt="wedding-photo" />
+          {/* <img className="header-img" src={this.state.image} alt="wedding-photo" /> */}
           <div className="logo">
             <button className="logo-header" onClick={this.handleClick}>
               Our Day

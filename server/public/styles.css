@@ -6,7 +6,7 @@
 #inspo-board-header {
   font-family: 'Montserrat', sans-serif;
   color: rgb(177, 177, 177);
-  font-size: 1.25rem;
+  font-size: 3vmax;
 }
 
 .upload-icon {
@@ -27,7 +27,7 @@
 }
 
 .header {
-  height: 100px;
+  height: 12vmax;
   background-color: #e1eff0;
   display: flex;
   align-items: center;
@@ -35,6 +35,7 @@
 
 .logo {
   position: absolute;
+  top: 0.5rem;
   margin: 0 1rem;
   background-color: white;
   width: 3rem;
@@ -48,9 +49,19 @@
 }
 
 .nav-logo {
-  position: absolute;
+  /* position: absolute;
   left: 3rem;
-  top: 1.5rem;
+  top: 1.5rem; */
+  background-color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: auto;
 }
 
 #current-page {
@@ -63,6 +74,7 @@
 .logo-text,
 .logo-header {
   font-family: 'Stalemate', cursive;
+  font-size: 1.5vmax;
   text-decoration: none;
   color: #979595;
   cursor: pointer;
@@ -402,7 +414,8 @@ button.cancel-budget {
   font-family: 'Tangerine', cursive;
 
   /* display: flex; */
-  justify-content: center;
-  font-size: 2rem;
+
+  /* justify-content: center; */
+  font-size: 6vmin;
   color: white;
 }
