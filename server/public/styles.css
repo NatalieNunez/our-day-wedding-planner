@@ -78,16 +78,18 @@
   position: fixed;
   bottom: 0;
   display: flex;
-  padding: 1rem 2rem;
+  padding: 1vmax 2vmax;
   width: 100%;
+  height: 8vh;
   justify-content: space-between;
+  align-items: center;
 }
 
 .add-guest-text,
 .add-budget-text {
   color: rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
+  font-size: 3vmax;
   cursor: pointer;
   margin: 0;
 }
@@ -105,7 +107,7 @@
 .add-guest-icon,
 .add-budget-icon {
   color: white;
-  font-size: 1.2rem;
+  font-size: 3vmax;
   text-shadow: 0 2px 3px #15898f;
 }
 
@@ -154,7 +156,8 @@
 .divider {
   margin: 0.8rem 0;
   background-color: #eaeaea;
-  height: 3px;
+
+  /* height: 3px; */
 }
 
 .add-guest-label,
@@ -328,17 +331,19 @@ a.nav-links {
 }
 
 .guest-status {
-  font-size: 0.7rem;
-  border-radius: 1rem;
-  padding: 5px;
+  font-size: 2vmin;
+  border-radius: 2vmin;
+  padding: 1.5vmin;
 }
 
 button.view-btn {
   border: none;
   border-radius: 1rem;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 1.5vmax;
   color: #7d7d7d;
+  margin: 0 2vmin;
+  min-width: 10vmax;
   cursor: pointer;
 }
 
@@ -348,7 +353,7 @@ button.view-btn {
 }
 
 .number-guests {
-  font-size: 14px;
+  font-size: 3vmin;
 }
 
 .budget-div {

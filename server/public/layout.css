@@ -96,6 +96,7 @@ input.profile-input {
   display: flex;
   justify-content: space-between;
   margin: 1rem;
+  font-size: 3vmin;
 }
 
 #guest-modal,
@@ -119,14 +120,17 @@ input.profile-input {
 
 #guest-container {
   overflow: scroll;
-  height: 24rem;
+  height: 60vh;
   margin: 1rem 0;
 }
 
 .view-options {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1rem 0;
+  /* display: flex;
+  justify-content: space-evenly; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 1rem;
 }
 
 .number-guests {
