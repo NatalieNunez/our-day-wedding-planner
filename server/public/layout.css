@@ -97,6 +97,7 @@ input.profile-input {
   justify-content: space-between;
   margin: 1rem;
   font-size: 3vmin;
+  color: #4f4f4f;
 }
 
 #guest-modal,
@@ -188,7 +189,7 @@ input.profile-input {
 
 div#budget-container {
   overflow: scroll;
-  height: 21rem;
+  height: 50vh;
 }
 
 .estimate {
@@ -243,19 +244,22 @@ img.header-img {
 }
 
 @media only screen and (min-width: 375px) {
-  #guest-modal-box {
+  #guest-modal-box,
+  #budget-modal-box {
     max-width: 300px;
   }
 }
 
 @media only screen and (min-width: 480px) {
-  #guest-modal-box {
+  #guest-modal-box,
+  #budget-modal-box {
     max-width: 450px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  #guest-modal-box {
+  #guest-modal-box,
+  #budget-modal-box {
     max-width: 500px;
   }
 }
