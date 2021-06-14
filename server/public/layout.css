@@ -106,12 +106,13 @@ input.profile-input {
 
 #guest-modal-box,
 #budget-modal-box {
-  width: 80%;
+  max-width: 250px;
   display: flex;
   margin: auto;
   position: relative;
-  top: 10rem;
-  height: 17rem;
+  top: 14vh;
+  height: 45vh;
+  min-height: 300px;
 }
 
 #budget-modal-box {
@@ -238,5 +239,23 @@ img.header-img {
   .nav-logo {
     min-width: 6.5rem;
     min-height: 6.5rem;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  #guest-modal-box {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  #guest-modal-box {
+    max-width: 450px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #guest-modal-box {
+    max-width: 500px;
   }
 }

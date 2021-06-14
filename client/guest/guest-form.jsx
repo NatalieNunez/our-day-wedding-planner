@@ -61,7 +61,7 @@ class GuestForm extends React.Component {
     return (
       <>
         <div className="guest-footer">
-          <h4 className="add-guest-text" onClick={this.toggleModal}>Add a guest</h4>
+          <span className="add-guest-text" onClick={this.toggleModal}>Add a guest</span>
           <button className="add-guest-btn" onClick={this.toggleModal}>
             <i className="fas fa-plus add-guest-icon"></i>
           </button>
