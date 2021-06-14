@@ -95,6 +95,7 @@ class ProfileForm extends React.Component {
             placeholder="Your Name"
             defaultValue={this.state.userName}
             onChange={this.handleChange}
+            autoFocus
             />
             <div className="divider profile"></div>
             <label className="profile-label">Partner&apos;s Name</label>
@@ -106,6 +107,7 @@ class ProfileForm extends React.Component {
             placeholder="Partner&apos;s Name"
             defaultValue={this.state.partnerName}
             onChange={this.handleChange}
+            autoFocus
             />
             <div className="divider profile"></div>
             <label className="profile-label">Wedding Date</label>
@@ -115,6 +117,7 @@ class ProfileForm extends React.Component {
             name="date"
             className="profile-input"
             onChange={this.handleChange}
+            autoFocus
             />
             <div className="divider profile"></div>
             <div className="profile-btn-div">

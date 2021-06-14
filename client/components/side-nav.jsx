@@ -15,7 +15,7 @@ class SideNav extends React.Component {
       <div className="nav-open" onClick={this.handleClick}>
         <div className="nav-box">
           <div className="header">
-            <div className="logo nav-logo">
+            <div className="nav-logo">
               <a className="logo-text" href="#">Our Day</a>
             </div>
           </div>
@@ -25,7 +25,7 @@ class SideNav extends React.Component {
           <div className="divider profile"></div>
           <a className="nav-links" href="#budget" id="budget-link">Budget</a>
           <div className="divider profile"></div>
-          <a className="nav-links" href="#to-do" id="todo-link">I Do&apos;s</a>
+          <a className="nav-links" href="#" id="todo-link">I Do&apos;s</a>
           <div className="divider profile"></div>
         </div>
       </div>

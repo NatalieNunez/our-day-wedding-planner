@@ -1,6 +1,6 @@
 #img-container {
-  width: 21rem;
-  height: 18rem;
+  max-width: 50rem;
+  height: 60vmax;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -15,8 +15,8 @@
 }
 
 #inspo-board {
-  height: 360px;
-  width: 95%;
+  height: 70vh;
+  max-width: 50rem;
   margin: 0.5rem auto 0;
 }
 
@@ -31,21 +31,24 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  max-width: 80rem;
+  margin: auto;
 }
 
 .profile-label,
 .save-profile {
   margin: 1rem 0;
+  font-size: 3vmin;
 }
 
 .profile-info {
   margin-top: 1rem;
+  font-size: 3vmin;
 }
 
 .profile-input {
   width: 95%;
-  margin-left: 0.5rem;
-  font-size: 15px;
+  font-size: 2vmax;
   color: gray;
 }
 
@@ -70,18 +73,19 @@ input.profile-input {
 }
 
 .home-header {
-  height: 12rem;
+  height: 12vmax;
   margin: 0.5rem;
   padding: 1rem 0;
   display: flex;
   position: relative;
+  background-color: #e1eff0;
 }
 
 .couple-names {
   margin: 0 auto;
   font-family: 'Tangerine', cursive;
   font-weight: 100;
-  font-size: 2.5rem;
+  font-size: 9vmin;
   color: #5c5c5c;
   z-index: 1;
   display: flex;
@@ -92,6 +96,8 @@ input.profile-input {
   display: flex;
   justify-content: space-between;
   margin: 1rem;
+  font-size: 3vmin;
+  color: #4f4f4f;
 }
 
 #guest-modal,
@@ -101,12 +107,13 @@ input.profile-input {
 
 #guest-modal-box,
 #budget-modal-box {
-  width: 80%;
+  max-width: 250px;
   display: flex;
   margin: auto;
   position: relative;
-  top: 10rem;
-  height: 17rem;
+  top: 14vh;
+  height: 45vh;
+  min-height: 300px;
 }
 
 #budget-modal-box {
@@ -115,14 +122,17 @@ input.profile-input {
 
 #guest-container {
   overflow: scroll;
-  height: 24rem;
+  height: 60vh;
   margin: 1rem 0;
 }
 
 .view-options {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1rem 0;
+  /* display: flex;
+  justify-content: space-evenly; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 1rem;
 }
 
 .number-guests {
@@ -179,7 +189,7 @@ input.profile-input {
 
 div#budget-container {
   overflow: scroll;
-  height: 21rem;
+  height: 50vh;
 }
 
 .estimate {
@@ -191,16 +201,65 @@ img.header-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: bottom;
   top: 0;
   opacity: 45%;
 }
 
 .days-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(137 204 200);
-  height: 4rem;
-  width: 60%;
-  margin: 1rem auto;
+  height: 9vmin;
+  width: 37vmin;
+  margin: 4vmin auto;
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 0 3px 4px #318883;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo,
+  .nav-logo {
+    min-width: 4rem;
+    min-height: 4rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .logo,
+  .nav-logo {
+    min-width: 5rem;
+    min-height: 5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .logo,
+  .nav-logo {
+    min-width: 6.5rem;
+    min-height: 6.5rem;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  #guest-modal-box,
+  #budget-modal-box {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  #guest-modal-box,
+  #budget-modal-box {
+    max-width: 450px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #guest-modal-box,
+  #budget-modal-box {
+    max-width: 500px;
+  }
 }

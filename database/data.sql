@@ -1,5 +1,5 @@
-insert into "users" ("userName", "partnerName", "weddingDate", "image")
-values ('Steph', 'Jon', 'May 31, 2022', 'https://wedding-app-upload-images.s3-us-west-1.amazonaws.com/background-home-app.jpeg');
+insert into "users" ("userName", "partnerName", "weddingDate")
+values ('Steph', 'Jon', 'May 31, 2022');
 
 insert into "budget" ("budgetTotal")
 values (20000);

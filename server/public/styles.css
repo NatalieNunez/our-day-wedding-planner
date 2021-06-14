@@ -1,18 +1,12 @@
-#inspo-board {
-  background-color: rgb(226 226 226 / 50%);
-  box-shadow: 0 1px 10px #bfbfbf;
-}
-
 #inspo-board-header {
   font-family: 'Montserrat', sans-serif;
   color: rgb(177, 177, 177);
-  font-size: 1.25rem;
+  font-size: 3vmax;
 }
 
 .upload-icon {
-  color: white;
+  color: #99d8e1;
   font-size: 1.2rem;
-  text-shadow: 0 2px 4px #989898;
 }
 
 .upload-icon:hover {
@@ -22,10 +16,11 @@
 .upload-btn {
   border: none;
   cursor: pointer;
+  background-color: white;
 }
 
 .header {
-  height: 100px;
+  height: 12vmax;
   background-color: #e1eff0;
   display: flex;
   align-items: center;
@@ -33,10 +28,11 @@
 
 .logo {
   position: absolute;
+  top: 0.5rem;
   margin: 0 1rem;
   background-color: white;
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   box-shadow: 0 3px 8px grey;
   display: flex;
@@ -46,14 +42,21 @@
 }
 
 .nav-logo {
-  position: absolute;
-  left: 3rem;
-  top: 1.5rem;
+  background-color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: auto;
 }
 
 #current-page {
   font-family: 'Stalemate', cursive;
-  font-size: 3rem;
+  font-size: 9vmin;
   color: rgb(87, 85, 83);
   margin: 0 auto;
 }
@@ -61,6 +64,7 @@
 .logo-text,
 .logo-header {
   font-family: 'Stalemate', cursive;
+  font-size: 1.5vmax;
   text-decoration: none;
   color: #979595;
   cursor: pointer;
@@ -71,19 +75,22 @@
 .guest-footer,
 .budget-footer {
   background-color: #5dd9df;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: flex;
-  padding: 1rem 2rem;
+  padding: 2vmax;
   width: 100%;
+
+  /* height: 8vh; */
   justify-content: space-between;
+  align-items: center;
 }
 
 .add-guest-text,
 .add-budget-text {
   color: rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
+  font-size: 2.5vmax;
   cursor: pointer;
   margin: 0;
 }
@@ -101,7 +108,7 @@
 .add-guest-icon,
 .add-budget-icon {
   color: white;
-  font-size: 1.2rem;
+  font-size: 2.5vmax;
   text-shadow: 0 2px 3px #15898f;
 }
 
@@ -112,7 +119,7 @@
 
 #guest-form,
 #budget-item-form {
-  width: 300px;
+  width: 100%;
 }
 
 #first-name,
@@ -126,8 +133,9 @@
 }
 
 .modal-btns {
-  margin: 1.5rem 1rem 0.5rem;
-  height: 10px;
+  margin: 2vh 1rem 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .guest-btn,
@@ -137,11 +145,11 @@
   color: #289aec;
   background-color: white;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+  font-size: 2vmax;
   cursor: pointer;
 }
 
-.guest-btn.save,
+/* .guest-btn.save, */
 .budget-btn.save {
   position: absolute;
   right: 15px;
@@ -157,19 +165,22 @@
 .add-budget-label {
   margin: 0 1.5rem;
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: 2vmax;
   font-weight: 600;
 }
 
 input {
-  width: 8rem;
+  width: 50%;
   padding: 0.4rem;
   font-family: 'Montserrat', sans-serif;
   border: 1px solid #d0d0d0;
+  font-size: 1.5vmax;
 }
 
 .inputs {
   display: flex;
+  justify-content: space-evenly;
+  margin: 2vh;
 }
 
 #modal-open {
@@ -196,10 +207,10 @@ input {
 }
 
 label.radio-label {
-  margin: 0.3rem 1.5rem;
+  margin: 1vh 1.5rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
-  padding: 0.4rem 1rem;
+  padding: 1vh 1rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px #d3d3d3;
   font-weight: 600;
@@ -252,15 +263,15 @@ i.true {
 
 .edit-profile,
 .save-profile {
-  width: 6rem;
-  padding: 0.5rem;
+  width: 10vmax;
+  padding: 1vmax;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+  font-size: 2vmax;
   color: white;
   border: none;
   background-color: #1b9096;
   outline: none;
-  border-radius: 16px;
+  border-radius: 3vmax;
   cursor: pointer;
 }
 
@@ -288,16 +299,16 @@ i.true {
 }
 
 .nav-box {
-  width: 50%;
-  height: 100%;
+  max-width: 30vmax;
+  height: 100vh;
   background-color: white;
   display: flex;
   flex-direction: column;
 }
 
 a.nav-links {
-  margin: 2rem 1rem;
-  font-size: 1.5rem;
+  margin: 3vmin 1vmin;
+  font-size: 2vmax;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -324,17 +335,19 @@ a.nav-links {
 }
 
 .guest-status {
-  font-size: 0.7rem;
-  border-radius: 1rem;
-  padding: 5px;
+  font-size: 2vmin;
+  border-radius: 2vmin;
+  padding: 1.5vmin;
 }
 
 button.view-btn {
   border: none;
   border-radius: 1rem;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 1.5vmax;
   color: #7d7d7d;
+  margin: 0 2vmin;
+  min-width: 10vmax;
   cursor: pointer;
 }
 
@@ -344,7 +357,7 @@ button.view-btn {
 }
 
 .number-guests {
-  font-size: 14px;
+  font-size: 3vmin;
 }
 
 .budget-div {
@@ -398,8 +411,13 @@ button.cancel-budget {
 
 .days-left {
   font-family: 'Tangerine', cursive;
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
+  font-size: 6vmin;
   color: white;
+}
+
+@media only screen and (min-height: 568px) {
+  a.nav-links {
+    margin: 6.5vmin 1vmin;
+    font-size: 3vmax;
+  }
 }

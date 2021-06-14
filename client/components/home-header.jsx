@@ -8,7 +8,6 @@ class HomeHeader extends React.Component {
       navOpen: false,
       userName: '',
       partnerName: '',
-      image: '',
       weddingDate: '',
       daysLeft: ''
     };
@@ -26,7 +25,6 @@ class HomeHeader extends React.Component {
         this.setState({
           userName: users[0].userName,
           partnerName: users[0].partnerName,
-          image: users[0].image,
           weddingDate: users[0].weddingDate
         });
         const weddingDate = new Date(this.state.weddingDate);
@@ -56,7 +54,6 @@ class HomeHeader extends React.Component {
         <>
         <SideNav isNavOpen={this.handleClick} />
         <div className="home-header">
-          <img className="header-img" src={this.state.image} alt="wedding-photo" />
           <div className="logo">
             <button className="logo-header" onClick={this.handleClick}>
               Our Day
@@ -64,13 +61,15 @@ class HomeHeader extends React.Component {
           </div>
           <span className="couple-names">{`${userName} & ${partnerName}`}</span>
         </div>
+        <div className="days-div">
+          <span className="days-left">{`${this.state.daysLeft} days left`}</span>
+        </div>
         </>
       );
     } else {
       return (
         <>
         <div className="home-header">
-          <img className="header-img" src={this.state.image} alt="wedding-photo" />
           <div className="logo">
             <button className="logo-header" onClick={this.handleClick}>
               Our Day
