@@ -302,16 +302,16 @@ i.true {
 }
 
 .nav-box {
-  width: 50%;
-  height: 100%;
+  max-width: 30vmax;
+  height: 100vh;
   background-color: white;
   display: flex;
   flex-direction: column;
 }
 
 a.nav-links {
-  margin: 2rem 1rem;
-  font-size: 1.5rem;
+  margin: 3vmin 1vmin;
+  font-size: 2vmax;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -414,4 +414,11 @@ button.cancel-budget {
   font-family: 'Tangerine', cursive;
   font-size: 6vmin;
   color: white;
+}
+
+@media only screen and (min-height: 568px) {
+  a.nav-links {
+    margin: 6.5vmin 1vmin;
+    font-size: 3vmax;
+  }
 }
