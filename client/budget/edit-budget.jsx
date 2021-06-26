@@ -67,16 +67,6 @@ class EditBudget extends React.Component {
                 </span>
           }
         </div>
-        <div className="labels budget-row">
-          <div className="legend-row">
-            <div className="available-legend"></div>
-            <span className="legend-text">Available</span>
-          </div>
-          <div className="legend-row">
-            <div className="spent-legend"></div>
-            <span className="legend-text">Spent</span>
-          </div>
-        </div>
       </div>
     );
   }
