@@ -127,8 +127,6 @@ input.profile-input {
 }
 
 .view-options {
-  /* display: flex;
-  justify-content: space-evenly; */
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -140,7 +138,6 @@ input.profile-input {
 }
 
 .budget-div {
-  height: 7.5rem;
   margin: 1rem;
   padding: 1rem;
   display: flex;
@@ -172,7 +169,7 @@ input.profile-input {
 }
 
 .budget-row {
-  flex-basis: calc(100% / 3);
+  display: flex;
 }
 
 .budget-item-div {
