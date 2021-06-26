@@ -52,22 +52,41 @@ class EditBudget extends React.Component {
   render() {
     const editOpen = this.state.editOpen;
     return (
+      <>
       <div className="budget-div">
         <div className="budget-row">
           <label className="budget-label">Total Budget</label>
-          {
-            editOpen
-              ? <form className="budget-form" onSubmit={this.handleSubmit}>
-                  <input className="budget-input" type="text" placeholder={`$ ${this.state.budgetTotal}`} onChange={this.handleChange} required/>
-                  <button type="submit" className="save-budget">Save</button>
-                  <button type="button" className="cancel-budget" onClick={this.toggleForm}>Cancel</button>
-                </form>
-              : <span className="budget-total">{`$ ${this.state.budgetTotal}`}
-                  <i className="fas fa-pen edit-budg-icon" onClick={this.toggleForm}></i>
-                </span>
-          }
+          <span className="budget-total">{`$ ${this.state.budgetTotal}`}
+            <i className="fas fa-pen edit-budg-icon" onClick={this.toggleForm}></i>
+          </span>
         </div>
       </div>
+      <div id={editOpen ? 'modal-open' : 'budget-modal'}>
+          <div id="budget-modal-box">
+            <form id="budget-item-form" onSubmit={this.handleSubmit}>
+              <div className="modal-btns">
+                <button className="budget-btn close" type="button" onClick={this.toggleForm}>Close</button>
+                <button className="budget-btn save" type="submit">Save</button>
+              </div>
+              <div className="row">
+                <div className="divider"></div>
+                <label className="add-budget-label">Total Budget</label>
+                <div className="inputs total-budget">
+                  <input
+                  required
+                  autoFocus
+                  id="item"
+                  type="number"
+                  name="budget-item"
+                  placeholder={`$${this.state.budgetTotal}`}
+                  defaultValue={`$${this.state.budgetTotal}`}
+                  onChange={this.handleChange}/>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        </>
     );
   }
 }
