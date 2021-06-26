@@ -366,13 +366,13 @@ button.view-btn {
 .budget-div {
   font-family: 'Montserrat', sans-serif;
   background-color: #fcfcfc;
-  border-radius: 0.5rem;
+  border-radius: 1vmax;
   box-shadow: 0 3px 5px grey;
 }
 
 .edit-budg-icon {
   color: #199095;
-  font-size: 12px;
+  font-size: 3vmin;
 }
 
 button.save-budget,
@@ -386,7 +386,8 @@ button.cancel-budget {
 .budget-label,
 .budget-total {
   color: rgb(49, 144, 149);
-  margin: 1rem;
+  margin: 0 3vmax;
+  font-size: 4.5vmin;
 }
 
 .available-legend {

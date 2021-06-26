@@ -175,11 +175,12 @@ input.profile-input {
 .budget-item-div {
   display: flex;
   justify-content: space-between;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 2vmax;
+  padding: 1vmax;
+  font-size: 2vmax;
   background-color: #fafafa;
   box-shadow: 0 1px 3px grey;
-  border-radius: 8px;
+  border-radius: 1vmax;
   font-family: 'Montserrat', sans-serif;
   color: rgb(92, 92, 92);
 }
