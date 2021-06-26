@@ -1,38 +1,4 @@
 import React from 'react';
-import { Doughnut } from 'react-chartjs-2';
-
-const config = {
-  datasets: [
-    {
-      label: 'Budget',
-      backgroundColor: [
-        '#1b9096',
-        '#94dee2'
-      ],
-      hoverBackgroundColor: [
-        '#1b9096',
-        '#94dee2'
-      ],
-      data: [20000, 0]
-    }
-  ]
-};
-
-class DoughnutChart extends React.Component {
-
-  render() {
-    return (
-      <Doughnut
-        data={config}
-        options={{
-          title: {
-            display: false
-          }
-        }}
-      />
-    );
-  }
-}
 
 class EditBudget extends React.Component {
   constructor(props) {
@@ -100,19 +66,6 @@ class EditBudget extends React.Component {
                   <i className="fas fa-pen edit-budg-icon" onClick={this.toggleForm}></i>
                 </span>
           }
-        </div>
-        <div className="labels budget-row">
-          <div className="legend-row">
-            <div className="available-legend"></div>
-            <span className="legend-text">Available</span>
-          </div>
-          <div className="legend-row">
-            <div className="spent-legend"></div>
-            <span className="legend-text">Spent</span>
-          </div>
-        </div>
-        <div className="chart budget-row">
-          <DoughnutChart />
         </div>
       </div>
     );
