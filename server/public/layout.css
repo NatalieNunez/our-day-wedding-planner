@@ -139,7 +139,7 @@ input.profile-input {
 
 .budget-div {
   margin: 1rem;
-  padding: 1rem;
+  padding: 1rem 0;
   display: flex;
 }
 
@@ -175,18 +175,19 @@ input.profile-input {
 .budget-item-div {
   display: flex;
   justify-content: space-between;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 2vmax;
+  padding: 1vmax;
+  font-size: 4vmin;
   background-color: #fafafa;
   box-shadow: 0 1px 3px grey;
-  border-radius: 8px;
+  border-radius: 1vmax;
   font-family: 'Montserrat', sans-serif;
   color: rgb(92, 92, 92);
 }
 
 div#budget-container {
   overflow: scroll;
-  height: 50vh;
+  height: 60vh;
 }
 
 .estimate {
@@ -258,5 +259,11 @@ img.header-img {
   #guest-modal-box,
   #budget-modal-box {
     max-width: 500px;
+  }
+}
+
+@media only screen and (min-height: 812px) {
+  #budget-container {
+    min-height: 65vh;
   }
 }

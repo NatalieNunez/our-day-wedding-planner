@@ -62,9 +62,7 @@ export default class BudgetPage extends React.Component {
       .then(newItem => {
         const newArray = this.state.items.slice();
         newArray.push(newItem);
-        this.setState({
-          items: newArray
-        });
+        this.getAllItems();
       })
       .catch(err => console.error(err));
   }
