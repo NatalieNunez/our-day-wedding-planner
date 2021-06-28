@@ -177,7 +177,7 @@ input.profile-input {
   justify-content: space-between;
   margin: 2vmax;
   padding: 1vmax;
-  font-size: 2vmax;
+  font-size: 4vmin;
   background-color: #fafafa;
   box-shadow: 0 1px 3px grey;
   border-radius: 1vmax;
@@ -187,7 +187,7 @@ input.profile-input {
 
 div#budget-container {
   overflow: scroll;
-  height: 50vh;
+  height: 60vh;
 }
 
 .estimate {
