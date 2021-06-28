@@ -139,7 +139,7 @@ input.profile-input {
 
 .budget-div {
   margin: 1rem;
-  padding: 1rem;
+  padding: 1rem 0;
   display: flex;
 }
 
@@ -259,5 +259,11 @@ img.header-img {
   #guest-modal-box,
   #budget-modal-box {
     max-width: 500px;
+  }
+}
+
+@media only screen and (min-height: 812px) {
+  #budget-container {
+    min-height: 65vh;
   }
 }
