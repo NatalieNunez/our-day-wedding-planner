@@ -5,7 +5,7 @@ function BudgetItem(props) {
   const estimate = props.item.estimate;
   return (
     <>
-      <div className="budget-item-div">
+      <div className={`${props.item.itemId} budget-item-div`} onClick={props.editBudget}>
         <span>{item}</span>
         <span className="estimate">{`$ ${estimate}`}</span>
       </div>
@@ -18,7 +18,7 @@ function ViewBudgetItems(props) {
     <div id="budget-container">
       {
         props.items.map(item => {
-          return <BudgetItem key={item.itemId} item={item} />;
+          return <BudgetItem key={item.itemId} item={item} editBudget={props.editBudget}/>;
         })
       }
     </div>
