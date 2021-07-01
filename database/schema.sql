@@ -27,7 +27,6 @@ create table "users" (
     "userName"      text             not null,
     "partnerName"   text             not null,
     "weddingDate"   text             not null,
-    "image"         text             not null,
     "createdAt"     timestamptz(6)   not null default now(),
     primary key ("userId")
 );
