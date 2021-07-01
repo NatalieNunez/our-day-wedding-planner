@@ -14,6 +14,7 @@ export default class BudgetPage extends React.Component {
     this.updateBudget = this.updateBudget.bind(this);
     this.getAllItems = this.getAllItems.bind(this);
     this.addBudgetItem = this.addBudgetItem.bind(this);
+    this.editBudget = this.editBudget.bind(this);
   }
 
   componentDidMount() {
@@ -67,12 +68,35 @@ export default class BudgetPage extends React.Component {
       .catch(err => console.error(err));
   }
 
+  editBudget(event) {
+    // console.log(event.target.tagName);
+    // if (event.target.tagName !== 'DIV') {
+    //   return;
+    // } else {
+    //   fetch('/api/budget-items'), {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify(newItem)
+    //   })
+    //     .then(res => res.json())
+    //     .then(newItem => {
+    //       const newArray = this.state.items.slice();
+    //       newArray.push(newItem);
+    //       this.getAllItems();
+    //     })
+    //     .catch(err => console.error(err));
+
+    // }
+  }
+
   render() {
     return (
       <>
         <Header />
         <EditBudget onSubmit={this.updateBudget} />
-        <ViewBudgetItems items={this.state.items} />
+        <ViewBudgetItems items={this.state.items} editBudget={this.editBudget}/>
         <BudgetForm onSubmit={this.addBudgetItem}/>
       </>
     );
