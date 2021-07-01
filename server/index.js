@@ -195,6 +195,50 @@ app.put('/api/budget', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.put('/api/budget-items/:itemId', (req, res, next) => {
+  const itemId = parseInt(req.params.itemId, 10);
+  const { item, estimate } = req.body;
+  const values = [item, estimate, itemId];
+
+  if (!Number.isInteger(itemId) || itemId <= 0) {
+    res.status(400).json({
+      error: 'itemId must be a positive integer.'
+    });
+    return;
+  }
+  if (!item || !estimate) {
+    res.status(400).json({
+      error: 'Item and estimate are both required fields.'
+    });
+    return;
+  }
+
+  const sql = `
+  update "budgetItems"
+    set "item" = $1,
+        "estimate" = $2
+      where "itemId" = $3
+      returning *
+  `;
+
+  db.query(sql, values)
+    .then(result => {
+      const item = result.rows[0];
+      if (!item) {
+        res.status(404).json({
+          error: `Cannot find item with id ${itemId}`
+        });
+      } else {
+        res.status(200).json(result.rows[0]);
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'An unexpected error occurred.'
+      });
+    });
+});
 // app.put('/api/budget-items:itemId', (req, res, next) => {
 //   const itemId = parseInt(req.params.itemId, 10);
 //   const { item, estimate } = req.body;
