@@ -117,7 +117,7 @@ input.profile-input {
 }
 
 #budget-modal-box {
-  height: 13rem;
+  height: 30rem;
 }
 
 #guest-container {
@@ -158,14 +158,6 @@ input.profile-input {
 
 .budget-input {
   display: block;
-}
-
-.chart {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  right: 3rem;
-  top: 8rem;
 }
 
 .budget-row {
@@ -258,7 +250,7 @@ img.header-img {
 @media only screen and (min-width: 1024px) {
   #guest-modal-box,
   #budget-modal-box {
-    max-width: 500px;
+    max-width: 800px;
   }
 }
 

@@ -69,11 +69,9 @@ export default class BudgetPage extends React.Component {
   }
 
   editBudget(event) {
-    // console.log(event.target.tagName);
-    // if (event.target.tagName !== 'DIV') {
-    //   return;
-    // } else {
-    //   fetch('/api/budget-items'), {
+    // if (event.target.tagName === 'DIV') {
+    //   const itemId = event.target.className.split(' ')[0];
+    //   fetch(`/api/budget-items${itemId}`, {
     //     method: 'POST',
     //     headers: {
     //       'Content-Type': 'application/json'
@@ -87,7 +85,6 @@ export default class BudgetPage extends React.Component {
     //       this.getAllItems();
     //     })
     //     .catch(err => console.error(err));
-
     // }
   }
 
