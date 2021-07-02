@@ -68,24 +68,24 @@ export default class BudgetPage extends React.Component {
       .catch(err => console.error(err));
   }
 
-  editBudget(event, newItem) {
-    if (event.target.tagName === 'DIV') {
-      const itemId = event.target.className.split(' ')[0];
-      fetch(`/api/budget-items${itemId}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(newItem)
-      })
-        .then(res => res.json())
-        .then(newItem => {
-          const newArray = this.state.items.slice();
-          newArray.push(newItem);
-          this.getAllItems();
-        })
-        .catch(err => console.error(err));
-    }
+  editBudget(event) {
+    // if (event.target.tagName === 'DIV') {
+    //   const itemId = event.target.className.split(' ')[0];
+    //   fetch(`/api/budget-items${itemId}`, {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify(newItem)
+    //   })
+    //     .then(res => res.json())
+    //     .then(newItem => {
+    //       const newArray = this.state.items.slice();
+    //       newArray.push(newItem);
+    //       this.getAllItems();
+    //     })
+    //     .catch(err => console.error(err));
+    // }
   }
 
   render() {

@@ -31,8 +31,8 @@
   top: 0.5rem;
   margin: 0 1rem;
   background-color: white;
-  width: 3rem;
-  height: 3rem;
+  width: 7vmax;
+  height: 7vmax;
   border-radius: 50%;
   box-shadow: 0 3px 8px grey;
   display: flex;
@@ -64,7 +64,7 @@
 .logo-text,
 .logo-header {
   font-family: 'Stalemate', cursive;
-  font-size: 1.5vmax;
+  font-size: 2vmax;
   text-decoration: none;
   color: #979595;
   cursor: pointer;
